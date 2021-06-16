@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Addon" representedClassName="Addon" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="addons" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="AppNotification" representedClassName="AppNotification" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="appointment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="notification" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="notifications" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Appointment" representedClassName="Appointment" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preferredTherapists" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="sessionsDone" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sessionsLeft" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="branch" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Branch" inverseName="appointments" inverseEntity="Branch" syncable="YES"/>
+        <relationship name="notification" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AppNotification" inverseName="appointment" inverseEntity="AppNotification" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="appointments" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Branch" representedClassName="Branch" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebookURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="googleURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instagramURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yelpURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="youtubeURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="appointments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="branch" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="businessHours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BranchBusinessHour" inverseName="branch" inverseEntity="BranchBusinessHour" syncable="YES"/>
+    </entity>
+    <entity name="BranchBusinessHour" representedClassName="BranchBusinessHour" syncable="YES">
+        <attribute name="daysOpen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeOpen" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="branch" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Branch" inverseName="businessHours" inverseEntity="Branch" syncable="YES"/>
+    </entity>
+    <entity name="Cart" representedClassName="Cart" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="cart" inverseEntity="Product" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="carts" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Addon" inverseName="location" inverseEntity="Addon" syncable="YES"/>
+        <relationship name="therapists" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Therapist" inverseName="location" inverseEntity="Therapist" syncable="YES"/>
+        <relationship name="treatments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Treatment" inverseName="location" inverseEntity="Treatment" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="benefits" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frequency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ingredients" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortHeader" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tips" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="product" inverseEntity="Cart" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="products" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Therapist" representedClassName="Therapist" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="therapists" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Treatment" representedClassName="Treatment" syncable="YES">
+        <attribute name="benefits" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="procedures" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suitable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="treatments" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="TreatmentHistory" representedClassName="TreatmentHistory" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productsUsed" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="therapist" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="treatmentHistory" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="accountBalance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isConnectedToFacebook" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isConnectedToGoogle" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isOtherEmailRegistered" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSubbedToEmailOpt" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSubbedToNewsLetter" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSubbedToNotifications" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isUserAccount" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preferredOutlet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stripeCustomerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unpaidClasses" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zenotiProfile" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="appointments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="user" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="carts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cart" inverseName="user" inverseEntity="Cart" syncable="YES"/>
+        <relationship name="notifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AppNotification" inverseName="user" inverseEntity="AppNotification" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="user" inverseEntity="Product" syncable="YES"/>
+        <relationship name="treatmentHistory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TreatmentHistory" inverseName="user" inverseEntity="TreatmentHistory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Addon" positionX="54" positionY="135" width="128" height="135"/>
+        <element name="AppNotification" positionX="-63" positionY="18" width="128" height="150"/>
+        <element name="Appointment" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="Branch" positionX="160" positionY="192" width="128" height="300"/>
+        <element name="BranchBusinessHour" positionX="108" positionY="189" width="128" height="90"/>
+        <element name="Cart" positionX="54" positionY="135" width="128" height="135"/>
+        <element name="Location" positionX="-63" positionY="18" width="128" height="165"/>
+        <element name="Product" positionX="-54" positionY="-9" width="128" height="345"/>
+        <element name="Therapist" positionX="-54" positionY="45" width="128" height="120"/>
+        <element name="Treatment" positionX="-45" positionY="81" width="128" height="270"/>
+        <element name="TreatmentHistory" positionX="54" positionY="135" width="128" height="180"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="450"/>
+    </elements>
+</model>

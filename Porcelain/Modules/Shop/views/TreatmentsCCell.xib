@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TreatmentsCCell" id="UVn-aD-VSf" customClass="TreatmentsCCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-Zo-HXP" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-MZ-3un">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-TA-Qvp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="neE-VQ-Q6z" customClass="LoadingImageView" customModule="Porcelain" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="HoQ-y9-Qmp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="neE-VQ-Q6z" firstAttribute="top" secondItem="hzV-TA-Qvp" secondAttribute="top" id="EZl-mB-fzM"/>
+                                            <constraint firstItem="neE-VQ-Q6z" firstAttribute="leading" secondItem="hzV-TA-Qvp" secondAttribute="leading" id="FLD-fi-ChC"/>
+                                            <constraint firstAttribute="trailing" secondItem="neE-VQ-Q6z" secondAttribute="trailing" id="h1Q-S1-7hf"/>
+                                            <constraint firstAttribute="bottom" secondItem="neE-VQ-Q6z" secondAttribute="bottom" id="jlx-Su-gOI"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dbn-hR-6Ar">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="117"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="SINGAPORE’S FIRST SMART SPA: PORCELAIN ORIGINS | #INSIDERNE…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzB-pV-hql">
+                                                <rect key="frame" x="16" y="0.0" width="343" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-NW-fEP">
+                                                <rect key="frame" x="16" y="39.5" width="343" height="43"/>
+                                                <string key="text">A few months ago, we wrote about nostalgia. Then, we’d said that just by looking at the many changes Porcelain had been through…</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avq-Bn-HYI">
+                                                <rect key="frame" x="0.0" y="90.5" width="375" height="26.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="WDy-mW-5fr"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="avq-Bn-HYI" secondAttribute="trailing" id="410-bh-anG"/>
+                                            <constraint firstItem="Ccp-NW-fEP" firstAttribute="leading" secondItem="dbn-hR-6Ar" secondAttribute="leading" constant="16" id="7rw-cf-yR2"/>
+                                            <constraint firstItem="avq-Bn-HYI" firstAttribute="leading" secondItem="dbn-hR-6Ar" secondAttribute="leading" id="Hwv-gh-pPm"/>
+                                            <constraint firstAttribute="trailing" secondItem="uzB-pV-hql" secondAttribute="trailing" constant="16" id="Un3-gF-udW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ccp-NW-fEP" secondAttribute="trailing" constant="16" id="tiH-08-tSK"/>
+                                            <constraint firstItem="uzB-pV-hql" firstAttribute="leading" secondItem="dbn-hR-6Ar" secondAttribute="leading" constant="16" id="vM1-Zd-XeW"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NRG-MZ-3un" secondAttribute="trailing" id="QVp-BV-cMi"/>
+                            <constraint firstAttribute="bottom" secondItem="NRG-MZ-3un" secondAttribute="bottom" id="evK-HV-XHP"/>
+                            <constraint firstItem="NRG-MZ-3un" firstAttribute="top" secondItem="Dxj-Zo-HXP" secondAttribute="top" id="qJB-dK-3R1"/>
+                            <constraint firstItem="NRG-MZ-3un" firstAttribute="leading" secondItem="Dxj-Zo-HXP" secondAttribute="leading" id="yYU-e1-q0o"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Dxj-Zo-HXP" firstAttribute="leading" secondItem="UVn-aD-VSf" secondAttribute="leading" id="Jyk-3h-VOR"/>
+                <constraint firstAttribute="bottom" secondItem="Dxj-Zo-HXP" secondAttribute="bottom" id="UtY-1g-OPh"/>
+                <constraint firstItem="Dxj-Zo-HXP" firstAttribute="top" secondItem="UVn-aD-VSf" secondAttribute="top" id="cXd-SK-kb6"/>
+                <constraint firstAttribute="trailing" secondItem="Dxj-Zo-HXP" secondAttribute="trailing" id="lqq-WR-0Ua"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VAw-C5-L75"/>
+            <size key="customSize" width="375" height="233"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Ccp-NW-fEP" id="Q0z-el-Lxs"/>
+                <outlet property="imageView" destination="neE-VQ-Q6z" id="5k2-vc-Zz2"/>
+                <outlet property="titleLabel" destination="uzB-pV-hql" id="J0k-DW-kIU"/>
+            </connections>
+            <point key="canvasLocation" x="-213.768115942029" y="-106.13839285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

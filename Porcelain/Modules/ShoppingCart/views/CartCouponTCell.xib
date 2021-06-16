@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCouponTCell" rowHeight="48" id="cnQ-Oo-QY6" customClass="CartCouponTCell" customModule="Porcelain_Skin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cnQ-Oo-QY6" id="S4d-ch-cal">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lZP-N3-J6h">
+                        <rect key="frame" x="16" y="4" width="382" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Coupon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3C-Sm-Rhh">
+                                <rect key="frame" x="0.0" y="0.0" width="55" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HolidayHooray" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TJ-q6-aSF">
+                                <rect key="frame" x="63" y="0.0" width="122" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dl0-Sp-x03">
+                                <rect key="frame" x="193" y="0.0" width="189" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-rL-eEA">
+                                        <rect key="frame" x="137" y="0.0" width="52" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="9wP-xe-xsV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="removeTapped:" destination="cnQ-Oo-QY6" eventType="touchUpInside" id="a8u-KU-3B5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="-$6.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-l4-pvr">
+                                        <rect key="frame" x="144.5" y="24" width="44.5" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lZP-N3-J6h" secondAttribute="bottom" constant="4" id="3Cy-PC-ugK"/>
+                    <constraint firstAttribute="trailing" secondItem="lZP-N3-J6h" secondAttribute="trailing" constant="16" id="82u-zu-JAb"/>
+                    <constraint firstItem="lZP-N3-J6h" firstAttribute="leading" secondItem="S4d-ch-cal" secondAttribute="leading" constant="16" id="U1t-JG-ZaR"/>
+                    <constraint firstItem="lZP-N3-J6h" firstAttribute="top" secondItem="S4d-ch-cal" secondAttribute="top" constant="4" id="uaH-fg-lKg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="couponLabel" destination="2TJ-q6-aSF" id="sG2-Rk-uku"/>
+                <outlet property="couponTitleLabel" destination="M3C-Sm-Rhh" id="z9H-ek-NlI"/>
+                <outlet property="removeButton" destination="IIK-rL-eEA" id="kVC-Y4-29w"/>
+                <outlet property="valueLabel" destination="Ln9-l4-pvr" id="IX4-GE-ABI"/>
+            </connections>
+            <point key="canvasLocation" x="-13.043478260869566" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Miller Display Regular.otf">
+            <string>Miller-Display</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PackageCell" rowHeight="70" id="KGk-i7-Jjw" customClass="PackageCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXJ-T3-n6q">
+                        <rect key="frame" x="15" y="0.0" width="290" height="69.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6BW-zi-fjw">
+                                <rect key="frame" x="15" y="16" width="260" height="37.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQC-vD-su8">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vJ8-0F-SPT">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Miller-Display" family="Miller" pointSize="14"/>
+                                                <color key="textColor" red="0.27058823529411763" green="0.41960784313725491" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x 3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-GO-r1r">
+                                                <rect key="frame" x="220" y="0.0" width="40" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="IBl-xi-XoG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Miller-Display" family="Miller" pointSize="18"/>
+                                                <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="maD-bz-nvs">
+                                                <rect key="frame" x="260" y="0.0" width="20" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="uJ3-tw-TDH"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Expiration]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8d-5G-8lR">
+                                        <rect key="frame" x="0.0" y="21.5" width="260" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6BW-zi-fjw" secondAttribute="trailing" constant="15" id="20C-mS-aDl"/>
+                            <constraint firstItem="6BW-zi-fjw" firstAttribute="leading" secondItem="EXJ-T3-n6q" secondAttribute="leading" constant="15" id="Ml3-fA-xgo"/>
+                            <constraint firstItem="6BW-zi-fjw" firstAttribute="centerY" secondItem="EXJ-T3-n6q" secondAttribute="centerY" id="iBS-gs-Lwm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="EXJ-T3-n6q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Y8f-cV-wOx"/>
+                    <constraint firstAttribute="trailing" secondItem="EXJ-T3-n6q" secondAttribute="trailing" constant="15" id="eU9-aI-MaE"/>
+                    <constraint firstAttribute="bottom" secondItem="EXJ-T3-n6q" secondAttribute="bottom" id="qgs-x5-Mm1"/>
+                    <constraint firstItem="EXJ-T3-n6q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="wlB-HP-bbE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="arrowImageView" destination="maD-bz-nvs" id="fSZ-Et-P3O"/>
+                <outlet property="bottomSpace" destination="qgs-x5-Mm1" id="IG3-n9-EDU"/>
+                <outlet property="containerView" destination="EXJ-T3-n6q" id="CbG-dz-plc"/>
+                <outlet property="expirationLabel" destination="M8d-5G-8lR" id="zU7-7A-Kdh"/>
+                <outlet property="leadingSpace" destination="Ml3-fA-xgo" id="Kzy-PX-7AV"/>
+                <outlet property="sessionsLeftLabel" destination="IBQ-GO-r1r" id="bBh-Y4-y9r"/>
+                <outlet property="topSpace" destination="Y8f-cV-wOx" id="NHw-9k-JPD"/>
+                <outlet property="treatmentLabel" destination="vJ8-0F-SPT" id="UZa-1f-5CS"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="72"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowDown" width="17" height="10"/>
+    </resources>
+</document>

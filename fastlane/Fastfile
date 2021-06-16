@@ -1,0 +1,103 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+	before_all do
+    	#slack webhook for notice default channel(mobile-staging)
+    	ENV["SLACK_URL"] = "https://hooks.slack.com/services/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" #@JustineR account
+    	# ENV["SLACK_URL"] = "https://hooks.slack.com/services/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" #pocelain-test
+    	# ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = 'fdxn-jkji-cbuh-giih' //integrated for production use
+  	end
+
+ 	desc "Description of what the lane does"
+  	lane :custom_lane do
+    	# add actions here: https://docs.fastlane.tools/actions
+
+  	end
+
+  	lane :post_to_slack do |options|
+  		environment	 	= options[:environment]
+	    version    	 	= get_version_number(xcodeproj: "Porcelain.xcodeproj")
+	    build        	= get_build_number(xcodeproj: "Porcelain.xcodeproj")
+	    releaseNotes 	= File.read("../Porcelain/ReleaseNotes.md")
+	    releaseChanges	= File.read("../Porcelain/ReleaseChanges.md")
+	    download_url 	= environment == "staging" ? "<https://apps.crashlytics.com/projects/5d01dacee46fea6fe84ad997|Install iOS Porcelain Customer>": ""
+
+	    slack(
+	      username: "Porcelain Customer iOS ("+ environment == "staging" ? "Staging": "Production" + ")",
+	      message: 'Released via fastlane :rocket:',
+	      payload: {
+	        'Version: ' + version => '',
+	        'Build: ' + build => '',
+	        'Release Notes: ' => releaseNotes,
+	        'Changes: ' => releaseChanges,
+	        '' => download_url,
+	      },
+	      default_payloads: [],
+	    )
+	  
+	  end
+
+	lane :upload_to_crashlytics do
+		releaseNotes = File.read("../Porcelain/ReleaseNotes.md")
+
+		crashlytics(
+		    api_token: "85d46bb39694a6207e1d9f5c68d6c52eb149b5d6",
+		    build_secret: "f982c8ead5d1b97b5660bbe59c8368fafbd3e2609bb7dc10b6006724e7640792",
+		    emails: [
+		    	'patricia.cesar@r4pid.com', 
+		    	'carlo.claudio@r4pid.com', 
+		    	'joe.octavo@r4pid.com', 
+		    	'joanne.octavo@r4pid.com', 
+		    	'justine.rangel@r4pid.com', 
+		    	'vijae.manlapaz@r4pid.com', 
+		    	'justineangelo888@gmail.com', 
+		    	'anna.perez@r4pid.com',
+		    	'genevieve.galano@r4pid.com', 
+		    ],
+		    notes: releaseNotes,
+		    notifications: true)
+	end
+
+	lane :upload_to_firebase_app_distribution do 
+		releaseNotes = File.read("../Porcelain/ReleaseNotes.md")
+
+		firebase_app_distribution(
+            app: "1:972764763917:ios:2762a344ba577797",
+            testers: "patricia.cesar@r4pid.com, justine.rangel@r4pid.com, genevieve.galano@r4pid.com, justineangelo888@gmail.com",
+            release_notes: releaseNotes
+        )
+	end
+
+	lane :build_dev do 
+	  	gym(scheme: 'Porcelain', 
+	    	export_method: 'development')
+	end
+
+
+  	lane :beta do
+	  	build_dev()
+
+	  	#upload_to_crashlytics()
+	  	upload_to_firebase_app_distribution()
+
+	  	after_all do 
+	  		post_to_slack(environment: "staging")
+	  	end
+	  end
+
+end

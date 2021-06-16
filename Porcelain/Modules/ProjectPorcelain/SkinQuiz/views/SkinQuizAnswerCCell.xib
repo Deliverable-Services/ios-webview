@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SkinQuizAnswerCCell" id="4dQ-D0-5qt" customClass="SkinQuizAnswerCCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ayx-6v-T69">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yev-ec-Cds">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="ic-checkbox-selected" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-b9-zCp">
+                                <rect key="frame" x="0.0" y="38.5" width="20" height="20"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pru-RO-zUF" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                                <rect key="frame" x="32" y="8.5" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m3t-1G-KRL" customClass="LoadingImageView" customModule="Porcelain" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="4" width="72" height="72"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0Jr-wZ-Ioi"/>
+                                    <constraint firstAttribute="width" constant="80" id="QK4-Py-wU1"/>
+                                    <constraint firstItem="m3t-1G-KRL" firstAttribute="top" secondItem="Pru-RO-zUF" secondAttribute="top" constant="4" id="YeB-zV-q9e"/>
+                                    <constraint firstItem="m3t-1G-KRL" firstAttribute="leading" secondItem="Pru-RO-zUF" secondAttribute="leading" constant="4" id="kuD-Xt-eNp"/>
+                                    <constraint firstAttribute="bottom" secondItem="m3t-1G-KRL" secondAttribute="bottom" constant="4" id="okr-1h-qGl"/>
+                                    <constraint firstAttribute="trailing" secondItem="m3t-1G-KRL" secondAttribute="trailing" constant="4" id="xmf-dt-jgU"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="frT-E2-MR1">
+                                <rect key="frame" x="124" y="23.5" width="196" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm always under the sun" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnL-Sm-Ka3">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So my skin is often burnt / prone to pigmentation, freckles or spots" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-Hi-QyW">
+                                        <rect key="frame" x="0.0" y="21" width="196" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Yev-ec-Cds" secondAttribute="trailing" id="6e5-RL-5Me"/>
+                    <constraint firstAttribute="bottom" secondItem="Yev-ec-Cds" secondAttribute="bottom" id="Dl0-ie-Dtg"/>
+                    <constraint firstItem="Yev-ec-Cds" firstAttribute="top" secondItem="ayx-6v-T69" secondAttribute="top" id="Js7-dd-vSI"/>
+                    <constraint firstItem="Yev-ec-Cds" firstAttribute="leading" secondItem="ayx-6v-T69" secondAttribute="leading" id="iVf-gR-9xj"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="320" height="97"/>
+            <connections>
+                <outlet property="contentStack" destination="Yev-ec-Cds" id="zpr-tR-H3C"/>
+                <outlet property="descriptionLabel" destination="YEb-Hi-QyW" id="dx0-iJ-szK"/>
+                <outlet property="imageView" destination="m3t-1G-KRL" id="t0o-60-xZq"/>
+                <outlet property="selectionView" destination="Pru-RO-zUF" id="boU-f0-fup"/>
+                <outlet property="specialImageView" destination="Hbt-b9-zCp" id="HDS-ZX-3bb"/>
+                <outlet property="titleLabel" destination="bnL-Sm-Ka3" id="78G-Xv-waN"/>
+            </connections>
+            <point key="canvasLocation" x="-63.768115942028992" y="43.861607142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic-checkbox-selected" width="20" height="20"/>
+    </resources>
+</document>

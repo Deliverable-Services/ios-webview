@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="238" id="PcJ-Jo-Bvz" customClass="BookAnAppointmentMainCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PcJ-Jo-Bvz" id="RPC-Zk-fjV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="237.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U7a-Z2-uFE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-gM-h6r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azA-N9-Xmd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="56" id="keF-XL-yn2"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="calloutTapped:" destination="PcJ-Jo-Bvz" eventType="touchUpInside" id="n12-h6-a63"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="1AR-wZ-nu2">
+                                        <rect key="frame" x="350" y="20" width="9" height="16"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="azA-N9-Xmd" secondAttribute="bottom" id="0cP-cd-VBd"/>
+                                    <constraint firstItem="azA-N9-Xmd" firstAttribute="top" secondItem="MgL-gM-h6r" secondAttribute="top" id="4XT-An-wre"/>
+                                    <constraint firstItem="azA-N9-Xmd" firstAttribute="leading" secondItem="MgL-gM-h6r" secondAttribute="leading" id="7ac-6v-MU3"/>
+                                    <constraint firstItem="1AR-wZ-nu2" firstAttribute="centerY" secondItem="azA-N9-Xmd" secondAttribute="centerY" id="OaE-WJ-mZF"/>
+                                    <constraint firstItem="1AR-wZ-nu2" firstAttribute="trailing" secondItem="azA-N9-Xmd" secondAttribute="trailing" constant="-16" id="bAR-kp-yXS"/>
+                                    <constraint firstAttribute="trailing" secondItem="azA-N9-Xmd" secondAttribute="trailing" id="fhP-rj-cQd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-p3-Fcy">
+                                <rect key="frame" x="0.0" y="56" width="375" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-Gk-BVa">
+                                        <rect key="frame" x="16" y="24" width="322" height="43.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porcelain, The Face Spa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-yC-Ea6">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Cantonment Road" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-Cj-OOc">
+                                                <rect key="frame" x="0.0" y="26.5" width="322" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-Pm-V7N">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                        <state key="normal" title=""/>
+                                        <connections>
+                                            <action selector="calloutTapped:" destination="PcJ-Jo-Bvz" eventType="touchUpInside" id="l0x-k0-Gr3"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-Gb-5PA">
+                                        <rect key="frame" x="350" y="37" width="9" height="16"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dSl-Gk-BVa" firstAttribute="centerY" secondItem="NDb-p3-Fcy" secondAttribute="centerY" id="0lS-Df-Dyf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kg3-Pm-V7N" secondAttribute="bottom" id="BYG-13-vBB"/>
+                                    <constraint firstItem="dSl-Gk-BVa" firstAttribute="leading" secondItem="NDb-p3-Fcy" secondAttribute="leading" constant="16" id="JDP-xw-tN7"/>
+                                    <constraint firstItem="7g1-Gb-5PA" firstAttribute="centerY" secondItem="Kg3-Pm-V7N" secondAttribute="centerY" id="af7-Ue-jXO"/>
+                                    <constraint firstAttribute="height" priority="999" constant="90" id="eMd-Ox-YJI"/>
+                                    <constraint firstItem="7g1-Gb-5PA" firstAttribute="trailing" secondItem="Kg3-Pm-V7N" secondAttribute="trailing" constant="-16" id="jfp-re-ZYF"/>
+                                    <constraint firstItem="Kg3-Pm-V7N" firstAttribute="top" secondItem="NDb-p3-Fcy" secondAttribute="top" id="k9z-1b-uft"/>
+                                    <constraint firstItem="Kg3-Pm-V7N" firstAttribute="leading" secondItem="NDb-p3-Fcy" secondAttribute="leading" id="nlw-5l-f5X"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kg3-Pm-V7N" secondAttribute="trailing" id="uXj-Ut-10a"/>
+                                    <constraint firstAttribute="trailing" secondItem="dSl-Gk-BVa" secondAttribute="trailing" constant="37" id="xrw-O4-b82"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yae-fM-RXm">
+                                <rect key="frame" x="0.0" y="146" width="375" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iMU-3K-Av8">
+                                        <rect key="frame" x="16" y="17.5" width="343" height="40.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porcelain, The Face Spa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-eg-diC">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Cantonment Road" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt8-cu-EH1">
+                                                <rect key="frame" x="0.0" y="23.5" width="343" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iMU-3K-Av8" secondAttribute="trailing" constant="16" id="3Am-ul-Xc8"/>
+                                    <constraint firstItem="iMU-3K-Av8" firstAttribute="leading" secondItem="Yae-fM-RXm" secondAttribute="leading" constant="16" id="Tgz-7E-5ME"/>
+                                    <constraint firstAttribute="height" priority="999" constant="76" id="XO3-rb-5Ff"/>
+                                    <constraint firstItem="iMU-3K-Av8" firstAttribute="centerY" secondItem="Yae-fM-RXm" secondAttribute="centerY" id="dQt-AF-HXd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="U7a-Z2-uFE" secondAttribute="trailing" id="0Pv-4I-2dt"/>
+                    <constraint firstItem="U7a-Z2-uFE" firstAttribute="leading" secondItem="RPC-Zk-fjV" secondAttribute="leading" id="Cyw-52-5kM"/>
+                    <constraint firstAttribute="bottom" secondItem="U7a-Z2-uFE" secondAttribute="bottom" constant="16" id="Kuu-9O-luC"/>
+                    <constraint firstItem="U7a-Z2-uFE" firstAttribute="top" secondItem="RPC-Zk-fjV" secondAttribute="top" id="rK0-X6-VLD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="_contentView" destination="NDb-p3-Fcy" id="AhU-Ov-Vmo"/>
+                <outlet property="calloutButton" destination="azA-N9-Xmd" id="Ff0-a6-2DS"/>
+                <outlet property="calloutView" destination="MgL-gM-h6r" id="Tm3-Jw-Rwu"/>
+                <outlet property="contentStack" destination="U7a-Z2-uFE" id="dsb-Kv-ROz"/>
+                <outlet property="contentSubtitleLabel" destination="xRy-Cj-OOc" id="ZjP-5V-ihI"/>
+                <outlet property="contentTitleLabel" destination="aQV-yC-Ea6" id="VFo-3o-fSv"/>
+                <outlet property="subContentSubtitleLabel" destination="dt8-cu-EH1" id="ai9-Cb-jcS"/>
+                <outlet property="subContentTitleLabel" destination="Tag-eg-diC" id="Knj-09-qGM"/>
+                <outlet property="subContentView" destination="Yae-fM-RXm" id="2pc-6C-ay0"/>
+            </connections>
+            <point key="canvasLocation" x="-188.5" y="-129"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowRight" width="9" height="16"/>
+    </resources>
+</document>

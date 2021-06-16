@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductsSectionTCell" rowHeight="290" id="U8P-9x-fG1" customClass="ProductsSectionTCell" customModule="Porcelain_Skin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U8P-9x-fG1" id="n9D-D4-C6o">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KcT-0W-Q1c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="314.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwL-cD-4vs">
+                                <rect key="frame" x="16" y="0.0" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-Ft-ndo">
+                                <rect key="frame" x="0.0" y="36.5" width="414" height="278"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="278" id="un2-mu-3h3"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Nxa-aX-G78">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="h9e-Ft-ndo" firstAttribute="leading" secondItem="KcT-0W-Q1c" secondAttribute="leading" id="ReV-Tb-92q"/>
+                            <constraint firstAttribute="trailing" secondItem="hwL-cD-4vs" secondAttribute="trailing" constant="16" id="RiO-NF-rd3"/>
+                            <constraint firstItem="hwL-cD-4vs" firstAttribute="leading" secondItem="KcT-0W-Q1c" secondAttribute="leading" constant="16" id="doS-vF-dZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="h9e-Ft-ndo" secondAttribute="trailing" id="jaH-69-est"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KcT-0W-Q1c" secondAttribute="trailing" id="KG4-fP-nyJ"/>
+                    <constraint firstItem="KcT-0W-Q1c" firstAttribute="top" secondItem="n9D-D4-C6o" secondAttribute="top" id="kgN-yD-y3S"/>
+                    <constraint firstAttribute="bottom" secondItem="KcT-0W-Q1c" secondAttribute="bottom" priority="250" constant="24" id="nh9-Fo-rkJ"/>
+                    <constraint firstItem="KcT-0W-Q1c" firstAttribute="leading" secondItem="n9D-D4-C6o" secondAttribute="leading" id="pa7-ss-Gkf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionHeightConstraint" destination="un2-mu-3h3" id="HHS-5I-B18"/>
+                <outlet property="collectionView" destination="h9e-Ft-ndo" id="hF8-sT-0HG"/>
+                <outlet property="titleLabel" destination="hwL-cD-4vs" id="TfT-qx-tSm"/>
+            </connections>
+            <point key="canvasLocation" x="-142.02898550724638" y="101.11607142857143"/>
+        </tableViewCell>
+    </objects>
+</document>

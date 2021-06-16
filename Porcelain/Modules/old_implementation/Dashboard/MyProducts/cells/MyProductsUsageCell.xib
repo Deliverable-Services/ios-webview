@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyProductsUsageCell" rowHeight="54" id="Phw-ov-xXf" customClass="MyProductsUsageCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Phw-ov-xXf" id="KPr-xI-2Pp">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-QR-zP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruQ-V7-NoX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PpR-Rs-D4g">
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="14"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-k7-z1Y" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="324.5" height="14"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-fl-hCL" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="14"/>
+                                                <color key="backgroundColor" red="0.34509803919999998" green="0.50588235290000005" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="huu-KY-e2A"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Me8-fl-hCL" firstAttribute="top" secondItem="6vI-k7-z1Y" secondAttribute="top" id="3bD-7d-0bZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Me8-fl-hCL" secondAttribute="bottom" id="Jf8-1W-9Pt"/>
+                                            <constraint firstItem="Me8-fl-hCL" firstAttribute="leading" secondItem="6vI-k7-z1Y" secondAttribute="leading" id="Ndi-PS-dqe"/>
+                                            <constraint firstAttribute="height" constant="14" id="b4C-yN-tsH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="DONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-V8-LdP">
+                                        <rect key="frame" x="340.5" y="0.0" width="34.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.34509803919999998" green="0.50588235290000005" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GLA-QR-zP9" firstAttribute="leading" secondItem="KPr-xI-2Pp" secondAttribute="leading" id="CaU-Iw-noI"/>
+                    <constraint firstItem="GLA-QR-zP9" firstAttribute="top" secondItem="KPr-xI-2Pp" secondAttribute="top" id="T56-hi-7Xz"/>
+                    <constraint firstAttribute="trailing" secondItem="GLA-QR-zP9" secondAttribute="trailing" id="kzH-NK-LdQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameAndPercentageLabel" destination="ruQ-V7-NoX" id="hIB-YX-CrE"/>
+                <outlet property="usageContainerView" destination="6vI-k7-z1Y" id="IWF-rg-HYF"/>
+                <outlet property="usageWidthConstraint" destination="huu-KY-e2A" id="5Zz-DG-KSV"/>
+            </connections>
+            <point key="canvasLocation" x="22" y="-5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewOrderShippingMethodView" customModule="Porcelain_Skin" customModuleProvider="target">
+            <connections>
+                <outlet property="contentStack" destination="ySq-37-b7a" id="cBA-kM-esu"/>
+                <outlet property="descriptionLabel" destination="iMV-GI-UbD" id="74s-ab-Gfc"/>
+                <outlet property="editButton" destination="cdY-lP-a7c" id="xCa-ns-lMC"/>
+                <outlet property="nameLabel" destination="nGK-Sh-LFp" id="V1e-Fk-nlN"/>
+                <outlet property="titleLabel" destination="djv-bd-5JO" id="TNh-Jd-2it"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" id="ySq-37-b7a">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="959-sV-37V">
+                    <rect key="frame" x="16" y="0.0" width="311" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djv-bd-5JO">
+                            <rect key="frame" x="0.0" y="12" width="270" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-lP-a7c">
+                            <rect key="frame" x="278" y="7" width="33" height="30"/>
+                            <state key="normal" title="EDIT"/>
+                            <connections>
+                                <action selector="editTapped:" destination="-1" eventType="touchUpInside" id="b3g-OT-Jb5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5bV-cR-8Qo"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-Pf-n8h">
+                    <rect key="frame" x="0.0" y="44" width="343" height="1"/>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vhs-3U-ToC"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ca-qp-UzC">
+                    <rect key="frame" x="16" y="45" width="311" height="43"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Tnf-R4-XpZ">
+                            <rect key="frame" x="0.0" y="11" width="311" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flat Rate: $5.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGK-Sh-LFp">
+                                    <rect key="frame" x="0.0" y="0.0" width="171" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Standard Delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-GI-UbD">
+                                    <rect key="frame" x="175" y="0.0" width="136" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Tnf-R4-XpZ" firstAttribute="leading" secondItem="6ca-qp-UzC" secondAttribute="leading" id="MzK-u0-zWU"/>
+                        <constraint firstItem="Tnf-R4-XpZ" firstAttribute="top" secondItem="6ca-qp-UzC" secondAttribute="top" constant="11" id="S7q-2M-Tte"/>
+                        <constraint firstAttribute="trailing" secondItem="Tnf-R4-XpZ" secondAttribute="trailing" id="o6X-GG-SnD"/>
+                        <constraint firstAttribute="bottom" secondItem="Tnf-R4-XpZ" secondAttribute="bottom" constant="16" id="qPZ-7x-1Wv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cqr-Pf-n8h" secondAttribute="trailing" id="9dn-99-f7Z"/>
+                <constraint firstAttribute="trailing" secondItem="6ca-qp-UzC" secondAttribute="trailing" constant="16" id="BxQ-Se-4eW"/>
+                <constraint firstItem="cqr-Pf-n8h" firstAttribute="leading" secondItem="ySq-37-b7a" secondAttribute="leading" id="jFa-pG-oxA"/>
+                <constraint firstItem="959-sV-37V" firstAttribute="leading" secondItem="ySq-37-b7a" secondAttribute="leading" constant="16" id="kP8-8G-vBG"/>
+                <constraint firstAttribute="trailing" secondItem="959-sV-37V" secondAttribute="trailing" constant="16" id="re6-6R-kcQ"/>
+                <constraint firstItem="6ca-qp-UzC" firstAttribute="leading" secondItem="ySq-37-b7a" secondAttribute="leading" constant="16" id="xe9-Mq-HfO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="BYf-L7-Gok"/>
+            <point key="canvasLocation" x="-383.33333333333337" y="-50.558035714285715"/>
+        </stackView>
+    </objects>
+</document>

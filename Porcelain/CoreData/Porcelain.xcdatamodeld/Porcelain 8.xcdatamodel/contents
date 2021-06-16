@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AppNotification" representedClassName="AppNotification" syncable="YES">
+        <attribute name="action" optional="YES" attributeType="String"/>
+        <attribute name="commonID" optional="YES" attributeType="String"/>
+        <attribute name="commonIDType" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateSent" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isRead" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="notifications" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Appointment" representedClassName="Appointment" syncable="YES">
+        <attribute name="centerID" optional="YES" attributeType="String"/>
+        <attribute name="dateApproved" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateBooked" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="invoiceID" optional="YES" attributeType="String"/>
+        <attribute name="monthYear" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reservationID" optional="YES" attributeType="String"/>
+        <attribute name="serviceIDs" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="sessionsLeft" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="therapistID" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="customerAppointments" inverseEntity="User"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Note" inverseName="appointment" inverseEntity="Note"/>
+        <relationship name="therapist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="therapistAppointments" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Article" representedClassName="Article" syncable="YES">
+        <attribute name="aType" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="datePublish" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="description_" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="img" optional="YES" attributeType="String"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Branch" representedClassName="Branch" syncable="YES">
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="canBook" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="centerCode" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="contactsRaw" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="operatingHoursRaw" optional="YES" attributeType="String"/>
+        <attribute name="organizationName" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="whatsapp" optional="YES" attributeType="String"/>
+        <attribute name="window" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Card" representedClassName="Card" syncable="YES">
+        <attribute name="brandRaw" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="cvcCheck" optional="YES" attributeType="String"/>
+        <attribute name="expMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="expYear" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="funding" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="last4" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="cards" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Note" representedClassName="Note" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="String"/>
+        <relationship name="appointment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="note" inverseEntity="Appointment"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Prescription" representedClassName="Prescription" syncable="YES">
+        <attribute name="afterNumberOfDays" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="frequencyRaw" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="numberOfPumps" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productRaw" optional="YES" attributeType="String"/>
+        <attribute name="sequenceNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="therapistRaw" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="prescriptions" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="application" optional="YES" attributeType="String"/>
+        <attribute name="averageRating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="benefitsRaw" optional="YES" attributeType="String"/>
+        <attribute name="categoryID" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="featured" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="fullIngredientsRaw" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="imagesRaw" optional="YES" attributeType="String"/>
+        <attribute name="moreInfoListRaw" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="purchasedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="quote" optional="YES" attributeType="String"/>
+        <attribute name="ravesRaw" optional="YES" attributeType="String"/>
+        <attribute name="review" optional="YES" attributeType="String"/>
+        <attribute name="shortContent" optional="YES" attributeType="String"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String"/>
+        <attribute name="shortHeader" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+        <attribute name="sku" optional="YES" attributeType="String"/>
+        <attribute name="sort" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="suitableRaw" optional="YES" attributeType="String"/>
+        <attribute name="totalReviews" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="usage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="products" inverseEntity="User"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Review" inverseName="product" inverseEntity="Review"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="categoryID"/>
+                <constraint value="type"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Purchase" representedClassName="Purchase" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="chargeID" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="contact" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="datePaid" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="discount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="monthYear" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="postal" optional="YES" attributeType="String"/>
+        <attribute name="purchasedItemsRaw" optional="YES" attributeType="String"/>
+        <attribute name="shipping" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="total" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String"/>
+        <attribute name="wcOrderID" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="purchases" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Review" representedClassName="Review" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="rate" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="review" optional="YES" attributeType="String"/>
+        <attribute name="reviewer" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="wcID" optional="YES" attributeType="String"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="reviews" inverseEntity="Product"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Service" representedClassName="Service" syncable="YES">
+        <attribute name="afterCare" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[String]"/>
+        <attribute name="award" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="benefits" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[String]"/>
+        <attribute name="categoryID" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="centerID" optional="YES" attributeType="String" customClassName="[String]"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="displayName" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isVisible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notSuitableFor" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="permalink" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="procedure" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="suitableFor" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="categoryID"/>
+                <constraint value="centerID"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="ShippingAddress" representedClassName="ShippingAddress" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="postalCode" optional="YES" attributeType="String"/>
+        <attribute name="primary" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="shippingAddresses" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Treatment" representedClassName="Treatment" syncable="YES">
+        <attribute name="afterCare" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="award" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="benefits" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="categoryID" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="centerIDs" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="displayName" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isVisible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notSuitableFor" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="permalink" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="procedure" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="serviceID" optional="YES" attributeType="String"/>
+        <attribute name="suitableFor" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="serviceID"/>
+                <constraint value="categoryID"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TreatmentPlan" representedClassName="TreatmentPlan" syncable="YES">
+        <attribute name="createdByID" optional="YES" attributeType="String"/>
+        <attribute name="customerID" optional="YES" attributeType="String"/>
+        <attribute name="cycles" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="editedByID" optional="YES" attributeType="String"/>
+        <attribute name="estimateDuration" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="templateID" optional="YES" attributeType="String"/>
+        <attribute name="treatmentPhase" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="treatmentPlan" inverseEntity="User"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TreatmentPlanItem" inverseName="plan" inverseEntity="TreatmentPlanItem"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TreatmentPlanItem" representedClassName="TreatmentPlanItem" syncable="YES">
+        <attribute name="addonsRaw" optional="YES" attributeType="String"/>
+        <attribute name="appointmentID" optional="YES" attributeType="String"/>
+        <attribute name="booked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="interval" optional="YES" attributeType="String"/>
+        <attribute name="isLocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="planID" optional="YES" attributeType="String"/>
+        <attribute name="sequenceNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serviceRaw" optional="YES" attributeType="String"/>
+        <attribute name="sessionsLeft" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TreatmentPlan" inverseName="items" inverseEntity="TreatmentPlan"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="accessToken" optional="YES" attributeType="String"/>
+        <attribute name="accountBalance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="anniversaryDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="avatar" optional="YES" attributeType="String"/>
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="centerIDs" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="displayName" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="employeeID" optional="YES" attributeType="String"/>
+        <attribute name="facebookLinked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="googleLinked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hasCredential" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="hasPhoneVerified" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="homePhone" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="identificationNumber" optional="YES" attributeType="String"/>
+        <attribute name="isSynced" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="maritalStatus" optional="YES" attributeType="String"/>
+        <attribute name="membership" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <attribute name="nationality" optional="YES" attributeType="String"/>
+        <attribute name="nickName" optional="YES" attributeType="String"/>
+        <attribute name="optEmail" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optMarketingEmail" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optMarketingSMS" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optNewsLetter" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optPushNotif" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optSMS" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optTransactionalEmail" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="optTransactionalSMS" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="personalAddressRaw" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="phoneCode" optional="YES" attributeType="String"/>
+        <attribute name="postalCode" optional="YES" attributeType="String"/>
+        <attribute name="preferredAssistantTherapistID" optional="YES" attributeType="String"/>
+        <attribute name="preferredAssistantTherapistName" optional="YES" attributeType="String"/>
+        <attribute name="preferredBranch" optional="YES" attributeType="String"/>
+        <attribute name="preferredCenterID" optional="YES" attributeType="String"/>
+        <attribute name="preferredOutlet" optional="YES" attributeType="String"/>
+        <attribute name="preferredTherapistID" optional="YES" attributeType="String"/>
+        <attribute name="preferredTherapistName" optional="YES" attributeType="String"/>
+        <attribute name="profession" optional="YES" attributeType="String"/>
+        <attribute name="referralSourceID" optional="YES" attributeType="String"/>
+        <attribute name="referredGuestID" optional="YES" attributeType="String"/>
+        <attribute name="regComplete" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String"/>
+        <attribute name="skinAnalysisRaw" optional="YES" attributeType="String"/>
+        <attribute name="skinAnalysisStatsRaw" optional="YES" attributeType="String"/>
+        <attribute name="skinQuizAnswerRaw" optional="YES" attributeType="String"/>
+        <attribute name="skinQuizRaw" optional="YES" attributeType="String"/>
+        <attribute name="skinQuizResultURL" optional="YES" attributeType="String"/>
+        <attribute name="skinTypeRaw" optional="YES" attributeType="String"/>
+        <attribute name="stripeCustomerID" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="unpaidClasses" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <attribute name="wcDateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="workAddressRaw" optional="YES" attributeType="String"/>
+        <attribute name="workPhone" optional="YES" attributeType="String"/>
+        <attribute name="zenotiDateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="zID" optional="YES" attributeType="String"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Card" inverseName="customer" inverseEntity="Card"/>
+        <relationship name="customerAppointments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="customer" inverseEntity="Appointment"/>
+        <relationship name="notifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AppNotification" inverseName="customer" inverseEntity="AppNotification"/>
+        <relationship name="prescriptions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Prescription" inverseName="customer" inverseEntity="Prescription"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="customer" inverseEntity="Product"/>
+        <relationship name="purchases" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Purchase" inverseName="customer" inverseEntity="Purchase"/>
+        <relationship name="shippingAddresses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShippingAddress" inverseName="customer" inverseEntity="ShippingAddress"/>
+        <relationship name="therapistAppointments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="therapist" inverseEntity="Appointment"/>
+        <relationship name="treatmentPlan" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TreatmentPlan" inverseName="customer" inverseEntity="TreatmentPlan"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="type"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="AppNotification" positionX="45" positionY="135" width="128" height="238"/>
+        <element name="Appointment" positionX="160" positionY="192" width="128" height="343"/>
+        <element name="Article" positionX="54" positionY="135" width="128" height="225"/>
+        <element name="Branch" positionX="160" positionY="192" width="128" height="298"/>
+        <element name="Card" positionX="54" positionY="135" width="128" height="223"/>
+        <element name="Note" positionX="63" positionY="153" width="128" height="120"/>
+        <element name="Prescription" positionX="45" positionY="135" width="128" height="165"/>
+        <element name="Product" positionX="45" positionY="135" width="128" height="538"/>
+        <element name="Purchase" positionX="54" positionY="135" width="128" height="28"/>
+        <element name="Review" positionX="54" positionY="135" width="128" height="178"/>
+        <element name="Service" positionX="54" positionY="144" width="128" height="328"/>
+        <element name="ShippingAddress" positionX="54" positionY="135" width="128" height="223"/>
+        <element name="Treatment" positionX="63" positionY="153" width="128" height="313"/>
+        <element name="TreatmentPlan" positionX="72" positionY="162" width="128" height="238"/>
+        <element name="TreatmentPlanItem" positionX="81" positionY="171" width="128" height="223"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="1213"/>
+    </elements>
+</model>

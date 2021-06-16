@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimedSliderItemCell" id="Qc7-4s-ymR" customClass="TimedSliderItemCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-Hz-pwX">
+                        <rect key="frame" x="16" y="16" width="383" height="168"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD1-mo-tvv">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5e0-Hz-pwX" firstAttribute="top" secondItem="Qc7-4s-ymR" secondAttribute="top" constant="8" id="AeM-PI-UXr"/>
+                <constraint firstAttribute="trailing" secondItem="5e0-Hz-pwX" secondAttribute="trailing" constant="16" id="TGs-AU-tsm"/>
+                <constraint firstItem="5e0-Hz-pwX" firstAttribute="leading" secondItem="Qc7-4s-ymR" secondAttribute="leading" constant="16" id="eEg-Pj-qhm"/>
+                <constraint firstAttribute="bottom" secondItem="5e0-Hz-pwX" secondAttribute="bottom" constant="30" id="wag-QX-1mq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TbY-Vq-74L"/>
+            <size key="customSize" width="375" height="133"/>
+            <connections>
+                <outlet property="contentLabel" destination="fD1-mo-tvv" id="IoS-aA-Q2e"/>
+            </connections>
+            <point key="canvasLocation" x="-42.753623188405797" y="58.258928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

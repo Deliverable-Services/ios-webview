@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ze4-7E-Cjg" customClass="AppointmentsSectionHeader" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="553" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-9g-TbI">
+                    <rect key="frame" x="517" y="22.5" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="fIy-DE-XdE"/>
+                        <constraint firstAttribute="width" constant="16" id="sDh-h2-Bjs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S4-vt-UTA">
+                    <rect key="frame" x="15" y="15" width="487" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jz-wG-Rmg">
+                    <rect key="frame" x="15" y="40.5" width="487" height="15.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btv-Pd-Esy">
+                    <rect key="frame" x="0.0" y="0.0" width="553" height="1"/>
+                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tTP-sW-yBV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5AU-bG-ZTg" firstAttribute="trailing" secondItem="QyN-9g-TbI" secondAttribute="trailing" priority="999" constant="20" id="0SA-m9-YFk"/>
+                <constraint firstItem="5AU-bG-ZTg" firstAttribute="top" secondItem="btv-Pd-Esy" secondAttribute="top" id="1Sl-p7-0KJ"/>
+                <constraint firstItem="5AU-bG-ZTg" firstAttribute="bottom" secondItem="8Jz-wG-Rmg" secondAttribute="bottom" priority="999" constant="5" id="Auw-No-sed"/>
+                <constraint firstItem="5AU-bG-ZTg" firstAttribute="trailing" secondItem="btv-Pd-Esy" secondAttribute="trailing" id="LsW-OF-30a"/>
+                <constraint firstItem="QyN-9g-TbI" firstAttribute="centerY" secondItem="5AU-bG-ZTg" secondAttribute="centerY" id="O9H-q9-Qjc"/>
+                <constraint firstItem="8Jz-wG-Rmg" firstAttribute="top" secondItem="3S4-vt-UTA" secondAttribute="bottom" constant="5" id="Xn2-Vm-v8r"/>
+                <constraint firstItem="5AU-bG-ZTg" firstAttribute="leading" secondItem="btv-Pd-Esy" secondAttribute="leading" id="abN-cA-2Zw"/>
+                <constraint firstItem="8Jz-wG-Rmg" firstAttribute="leading" secondItem="3S4-vt-UTA" secondAttribute="leading" id="mW3-uP-kSy"/>
+                <constraint firstItem="QyN-9g-TbI" firstAttribute="leading" secondItem="3S4-vt-UTA" secondAttribute="trailing" constant="15" id="mdM-lx-c6h"/>
+                <constraint firstItem="3S4-vt-UTA" firstAttribute="top" secondItem="5AU-bG-ZTg" secondAttribute="top" constant="15" id="qsk-rr-S4x"/>
+                <constraint firstItem="3S4-vt-UTA" firstAttribute="leading" secondItem="5AU-bG-ZTg" secondAttribute="leading" constant="15" id="tDD-zN-aAP"/>
+                <constraint firstItem="8Jz-wG-Rmg" firstAttribute="trailing" secondItem="3S4-vt-UTA" secondAttribute="trailing" id="vkL-eH-1Wy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="5AU-bG-ZTg"/>
+            <connections>
+                <outlet property="arrow" destination="QyN-9g-TbI" id="mJU-iz-7Hh"/>
+                <outlet property="descLbl" destination="8Jz-wG-Rmg" id="19B-Yn-vWU"/>
+                <outlet property="titleLbl" destination="3S4-vt-UTA" id="7Rw-hp-qpW"/>
+            </connections>
+            <point key="canvasLocation" x="309.5" y="-363.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowDown" width="17" height="10"/>
+    </resources>
+</document>

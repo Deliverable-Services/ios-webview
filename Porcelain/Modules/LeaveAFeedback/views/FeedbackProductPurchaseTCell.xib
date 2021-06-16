@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedbackProductPurchaseTCell" rowHeight="144" id="0jq-Gb-7cO" customClass="FeedbackProductPurchaseTCell" customModule="Porcelain_Skin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0jq-Gb-7cO" id="4Fn-dD-h3B">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="laY-nM-dKu">
+                        <rect key="frame" x="16" y="16" width="382" height="107"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WTc-hB-OIo">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-AM-QBS" customClass="LoadingImageView" customModule="Porcelain_Skin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="ecQ-F9-5Pl"/>
+                                            <constraint firstAttribute="height" constant="72" id="je9-OQ-42h"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HQJ-fY-znR">
+                                        <rect key="frame" x="64" y="15.5" width="318" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revive, Makeup Cleanser" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xN1-6h-i2p">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="$55.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naj-A1-3lh">
+                                                <rect key="frame" x="0.0" y="21" width="318" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="IFK-YR-wIq"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-Fn-hRb">
+                                <rect key="frame" x="0.0" y="91" width="382" height="16"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-ci-vhz">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="16"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-be-r9r">
+                                                <rect key="frame" x="0.0" y="0.0" width="8" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="TmI-XN-aIo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance Daily Cleansing Gel (30ml)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERF-WG-bzA">
+                                                <rect key="frame" x="20" y="0.0" width="362" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="laY-nM-dKu" firstAttribute="leading" secondItem="4Fn-dD-h3B" secondAttribute="leading" constant="16" id="43H-rI-oh2"/>
+                    <constraint firstAttribute="trailing" secondItem="laY-nM-dKu" secondAttribute="trailing" constant="16" id="Jzl-N0-dc1"/>
+                    <constraint firstItem="laY-nM-dKu" firstAttribute="top" secondItem="4Fn-dD-h3B" secondAttribute="top" constant="16" id="gKG-Xi-qpL"/>
+                    <constraint firstAttribute="bottom" secondItem="laY-nM-dKu" secondAttribute="bottom" priority="250" constant="16" id="tTN-yY-94i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="nameLabel" destination="xN1-6h-i2p" id="o8x-NC-2bQ"/>
+                <outlet property="priceLabel" destination="naj-A1-3lh" id="Voe-N9-h5m"/>
+                <outlet property="productImageView" destination="pVD-AM-QBS" id="717-Cv-LpZ"/>
+                <outlet property="variationStack" destination="5ml-Fn-hRb" id="YE4-Fq-mgx"/>
+            </connections>
+            <point key="canvasLocation" x="-110.14492753623189" y="81.026785714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

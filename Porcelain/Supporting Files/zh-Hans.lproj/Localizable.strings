@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Porcelain
+
+  Created by Patricia Marie Cesar on 31/05/2018.
+  Copyright © 2018 Patricia Marie Cesar. All rights reserved.
+*/
+
+"Mobile app name" = "Porcelain";
+"facebook" = "继续与facebook";
+"google" = "继续与谷歌";
+"email" = "继续与其他电子邮件";

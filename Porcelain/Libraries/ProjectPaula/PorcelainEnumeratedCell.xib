@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Material-Design-Iconic-Font.ttf">
+            <string>Material-Design-Iconic-Font</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PorcelainEnumeratedCell" rowHeight="25" id="tvP-JM-1Pk" customClass="PorcelainEnumeratedCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="25"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tvP-JM-1Pk" id="3sp-vA-MlV">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="25"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-0h-q3M">
+                        <rect key="frame" x="0.0" y="4" width="307" height="18"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-porcelain-bullet" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-qJ-8w5">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="KqI-Ig-xcc"/>
+                                    <constraint firstAttribute="height" constant="16" id="Mxk-EQ-5Kj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYL-qV-i5j">
+                                <rect key="frame" x="24" y="0.0" width="10" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="CX3-h3-rbp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Material-Design-Iconic-Font" family="Material-Design-Iconic-Font" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu8-GR-ZCB" customClass="DesignableLabel" customModule="Porcelain" customModuleProvider="target">
+                                <rect key="frame" x="42" y="0.0" width="265" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DAj-0h-q3M" firstAttribute="leading" secondItem="3sp-vA-MlV" secondAttribute="leading" id="Au2-06-rDi"/>
+                    <constraint firstAttribute="bottom" secondItem="DAj-0h-q3M" secondAttribute="bottom" priority="250" constant="4" id="WAo-lh-obO"/>
+                    <constraint firstItem="DAj-0h-q3M" firstAttribute="top" secondItem="3sp-vA-MlV" secondAttribute="top" constant="4" id="kHm-fT-xFb"/>
+                    <constraint firstAttribute="trailing" secondItem="DAj-0h-q3M" secondAttribute="trailing" id="tmC-6u-yBq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="iconImageView" destination="iJ0-qJ-8w5" id="SyC-g3-O79"/>
+                <outlet property="materialIconLabel" destination="iYL-qV-i5j" id="X7s-4Y-BC0"/>
+                <outlet property="titleLabel" destination="tu8-GR-ZCB" id="7cH-aP-bfC"/>
+            </connections>
+            <point key="canvasLocation" x="-241" y="34"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-porcelain-bullet" width="14" height="14"/>
+    </resources>
+</document>

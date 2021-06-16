@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartItemsTCell" rowHeight="147" id="7jV-ps-hdQ" customClass="CartItemsTCell" customModule="Porcelain_Skin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7jV-ps-hdQ" id="AB7-lN-9tf">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKT-cd-gvA" customClass="DesignableView" customModule="Porcelain_Skin" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="382" height="139"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="lpt-Fv-eH9">
+                                <rect key="frame" x="16" y="16" width="350" height="107"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="y6D-I6-eq2">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="72"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-iE-F8j" customClass="LoadingImageView" customModule="Porcelain_Skin" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="4Rc-7R-CYk"/>
+                                                    <constraint firstAttribute="width" constant="48" id="W8n-FC-ngl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fTR-Gt-8KM">
+                                                <rect key="frame" x="60" y="11" width="174" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revive, Makeup Cleanser (30ml)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sMM-wK-dFw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$55.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-1K-J8f">
+                                                        <rect key="frame" x="0.0" y="33.5" width="174" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uWJ-pQ-GYB">
+                                                <rect key="frame" x="246" y="19.5" width="104" height="33"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a74-jA-DcZ" customClass="DesignableButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="2.5" width="28" height="28"/>
+                                                        <color key="backgroundColor" red="0.43921568630000002" green="0.61176470589999998" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="5WT-Lc-kKF"/>
+                                                            <constraint firstAttribute="width" constant="28" id="GkH-MW-thT"/>
+                                                        </constraints>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="decrementTapped:" destination="7jV-ps-hdQ" eventType="touchUpInside" id="z9G-f0-tcw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr4-jh-x0v">
+                                                        <rect key="frame" x="36" y="0.0" width="32" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-8v-mbU" customClass="DesignableButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2.5" width="28" height="28"/>
+                                                        <color key="backgroundColor" red="0.43921568630000002" green="0.61176470589999998" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="Hxv-zv-Mun"/>
+                                                            <constraint firstAttribute="height" constant="28" id="Nbj-rF-9By"/>
+                                                        </constraints>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="incrementTapped:" destination="7jV-ps-hdQ" eventType="touchUpInside" id="hin-E1-Ciu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-g6-X5i">
+                                        <rect key="frame" x="0.0" y="91" width="350" height="16"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-qf-KFb">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuO-Ol-Yl2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="8" height="16"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="lRr-MS-F8M"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance Daily Cleansing Gel (30ml)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecJ-dz-F5j">
+                                                        <rect key="frame" x="20" y="0.0" width="330" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lpt-Fv-eH9" firstAttribute="leading" secondItem="EKT-cd-gvA" secondAttribute="leading" constant="16" id="DDS-t7-UMQ"/>
+                            <constraint firstAttribute="bottom" secondItem="lpt-Fv-eH9" secondAttribute="bottom" constant="16" id="X8j-E5-b1o"/>
+                            <constraint firstAttribute="trailing" secondItem="lpt-Fv-eH9" secondAttribute="trailing" constant="16" id="edC-g0-m5U"/>
+                            <constraint firstItem="lpt-Fv-eH9" firstAttribute="top" secondItem="EKT-cd-gvA" secondAttribute="top" constant="16" id="hFL-KC-gqc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EKT-cd-gvA" firstAttribute="leading" secondItem="AB7-lN-9tf" secondAttribute="leading" constant="16" id="3dY-Tg-YFL"/>
+                    <constraint firstItem="EKT-cd-gvA" firstAttribute="top" secondItem="AB7-lN-9tf" secondAttribute="top" id="AZ5-SI-ue9"/>
+                    <constraint firstAttribute="trailing" secondItem="EKT-cd-gvA" secondAttribute="trailing" constant="16" id="gJV-6F-G8n"/>
+                    <constraint firstAttribute="bottom" secondItem="EKT-cd-gvA" secondAttribute="bottom" priority="250" constant="8" id="rJW-Ea-Nnn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="EKT-cd-gvA" id="8Yn-JV-fDJ"/>
+                <outlet property="countButton" destination="zr4-jh-x0v" id="XCs-MT-ifS"/>
+                <outlet property="decrementButton" destination="a74-jA-DcZ" id="bZX-Dl-bsf"/>
+                <outlet property="incrementButton" destination="G9J-8v-mbU" id="QNB-mL-Jtm"/>
+                <outlet property="nameLabel" destination="sMM-wK-dFw" id="xig-mc-YQg"/>
+                <outlet property="priceLabel" destination="iHS-1K-J8f" id="Lnm-pd-xxm"/>
+                <outlet property="productImageView" destination="yX8-iE-F8j" id="tA2-Ri-i8E"/>
+                <outlet property="variationStack" destination="fvy-g6-X5i" id="kw1-J2-Dpk"/>
+            </connections>
+            <point key="canvasLocation" x="15.942028985507248" y="12.053571428571429"/>
+        </tableViewCell>
+    </objects>
+</document>

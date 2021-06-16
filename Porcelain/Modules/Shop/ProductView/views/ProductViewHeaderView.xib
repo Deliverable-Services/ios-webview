@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewHeaderView" customModule="Porcelain_Skin" customModuleProvider="target">
+            <connections>
+                <outlet property="addToBasketButton" destination="drn-oc-FmJ" id="Xgv-qL-zzl"/>
+                <outlet property="descriptionLabel" destination="Lh6-eq-naA" id="3Qs-GZ-LRc"/>
+                <outlet property="imageGalleryView" destination="tYd-X8-z2V" id="KeO-wg-ssN"/>
+                <outlet property="outOfStock" destination="EgN-dr-vF7" id="8QW-6D-5kT"/>
+                <outlet property="priceLabel" destination="PJx-NG-2Jt" id="KWY-64-Vmk"/>
+                <outlet property="ratingsLabel" destination="bQS-vy-Cun" id="9Ne-iQ-t6g"/>
+                <outlet property="regularPriceLabel" destination="izO-8a-ww0" id="HGu-QL-9Te"/>
+                <outlet property="titleLabel" destination="duP-z1-Oy7" id="MXU-RV-arY"/>
+                <outlet property="variationStack" destination="Jiy-Xx-LUA" id="Vp1-nD-hOp"/>
+                <outlet property="view" destination="iN0-l3-epB" id="XkD-k6-QzX"/>
+                <outlet property="whatsIncludedStack" destination="KB9-KB-f5V" id="v8t-WO-dS8"/>
+                <outlet property="whatsIncludedTitleLabel" destination="We3-57-ZSQ" id="ram-Rz-GyR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="872"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="l7A-oY-hDU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYd-X8-z2V" customClass="ImageGalleryView" customModule="Porcelain_Skin" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tYd-X8-z2V" secondAttribute="height" multiplier="1:1" id="9MA-zd-6aE"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Sdo-Py-ajZ">
+                            <rect key="frame" x="20" y="438" width="374" height="330"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qTx-Mu-UeI">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sO4-DX-8ao">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="141.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acne Buster Kit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duP-z1-Oy7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sd5-LO-p7z">
+                                                    <rect key="frame" x="0.0" y="33.5" width="374" height="49"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gva-Dd-nfm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="24"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$89.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJx-NG-2Jt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izO-8a-ww0">
+                                                                    <rect key="frame" x="55" y="0.0" width="53" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgN-dr-vF7" customClass="DesignableButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                                                                    <rect key="frame" x="116" y="0.0" width="109" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="13"/>
+                                                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                                                    <state key="normal" title="OUT OF STOCK">
+                                                                        <color key="titleColor" red="1" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="gCY-Mi-c0I"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0         17 Reviews  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQS-vy-Cun">
+                                                            <rect key="frame" x="0.0" y="32" width="213.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-eq-naA">
+                                                    <rect key="frame" x="0.0" y="94.5" width="374" height="47"/>
+                                                    <string key="text">The definitive SOS kit for acne-afflicted complexions, this contains what Porcelain fans consider as the go-to stars when hormones go.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="KB9-KB-f5V">
+                                            <rect key="frame" x="0.0" y="165.5" width="374" height="84.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Included" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We3-57-ZSQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Jiy-Xx-LUA">
+                                                    <rect key="frame" x="0.0" y="41" width="374" height="43.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnT-1Y-foA" customClass="ProductVariationDropDown" customModule="Porcelain_Skin" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" priority="250" constant="29" id="y1w-ac-ZNh"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drn-oc-FmJ" customClass="DesignableButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="282" width="374" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="l6X-pB-c8X"/>
+                                    </constraints>
+                                    <state key="normal" title="ADD TO BASKET"/>
+                                    <connections>
+                                        <action selector="addToBasketTapped:" destination="-1" eventType="touchUpInside" id="fIy-1z-aVn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Sdo-Py-ajZ" secondAttribute="trailing" constant="20" id="VLm-6h-Kl1"/>
+                        <constraint firstItem="Sdo-Py-ajZ" firstAttribute="leading" secondItem="l7A-oY-hDU" secondAttribute="leading" constant="20" id="Zjh-fj-aHj"/>
+                        <constraint firstAttribute="trailing" secondItem="tYd-X8-z2V" secondAttribute="trailing" id="hDc-PD-ZLd"/>
+                        <constraint firstItem="tYd-X8-z2V" firstAttribute="leading" secondItem="l7A-oY-hDU" secondAttribute="leading" id="uQd-gJ-Zxo"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l7A-oY-hDU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3mX-Qn-8HD"/>
+                <constraint firstAttribute="bottom" secondItem="l7A-oY-hDU" secondAttribute="bottom" constant="104" id="5xg-mY-t2p"/>
+                <constraint firstItem="l7A-oY-hDU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YkQ-hm-leX"/>
+                <constraint firstAttribute="trailing" secondItem="l7A-oY-hDU" secondAttribute="trailing" id="y9k-a6-qr1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="134.78260869565219" y="80.022321428571431"/>
+        </view>
+    </objects>
+</document>

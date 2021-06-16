@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeaSelectionCCell" id="Aey-Dx-OCF" customClass="TeaSelectionCCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eB8-qf-6q4">
+                <rect key="frame" x="0.0" y="0.0" width="256" height="178"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pJH-lD-NlI">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="178"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="jqZ-B3-qfA">
+                                <rect key="frame" x="0.0" y="12.5" width="256" height="153.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-selected-tea" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-b6-sZu">
+                                        <rect key="frame" x="96.5" y="0.0" width="63" height="75"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="f79-K8-hff">
+                                        <rect key="frame" x="25" y="86" width="206.5" height="67.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED FOR YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-hE-1gG">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vY-nO-g4Y">
+                                                <rect key="frame" x="40.5" y="26.5" width="125.5" height="41"/>
+                                                <string key="text">For clearing skin
+congestion</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pJH-lD-NlI" firstAttribute="leading" secondItem="eB8-qf-6q4" secondAttribute="leading" id="FMr-VS-J5i"/>
+                    <constraint firstItem="pJH-lD-NlI" firstAttribute="top" secondItem="eB8-qf-6q4" secondAttribute="top" id="KAq-Ma-TT4"/>
+                    <constraint firstAttribute="bottom" secondItem="pJH-lD-NlI" secondAttribute="bottom" id="QIl-OS-SJz"/>
+                    <constraint firstAttribute="trailing" secondItem="pJH-lD-NlI" secondAttribute="trailing" id="kO0-ib-1Sd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="256" height="178"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="6vY-nO-g4Y" id="t5Q-Wy-mL3"/>
+                <outlet property="imageView" destination="bLD-b6-sZu" id="1rt-um-JTv"/>
+                <outlet property="titleLabel" destination="WBh-hE-1gG" id="Fey-hq-luT"/>
+            </connections>
+            <point key="canvasLocation" x="7.2463768115942031" y="111.16071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic-selected-tea" width="63" height="75"/>
+    </resources>
+</document>

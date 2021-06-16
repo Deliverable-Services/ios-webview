@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationsTCell" rowHeight="90" id="Pcz-nL-O4l" customClass="NotificationsTCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pcz-nL-O4l" id="dHu-1I-v4i">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-Rq-oLW" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="382" height="79.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-Db-a7e">
+                                <rect key="frame" x="16" y="12" width="350" height="55.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 27, 2019 | 12:15 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU5-zj-0TL">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How was your experience?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F11-CB-V88">
+                                        <rect key="frame" x="0.0" y="18.5" width="350" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about your experience to help you serve" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-Nj-ykJ">
+                                        <rect key="frame" x="0.0" y="39.5" width="350" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwW-mh-ulU" customClass="DesignableView" customModule="Porcelain" customModuleProvider="target">
+                                <rect key="frame" x="362" y="12" width="8" height="8"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Dsv-tu-RuM"/>
+                                    <constraint firstAttribute="width" constant="8" id="Udo-DO-ncG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g2q-Db-a7e" secondAttribute="bottom" constant="12" id="1Ng-OV-UOd"/>
+                            <constraint firstItem="BwW-mh-ulU" firstAttribute="top" secondItem="ibT-Rq-oLW" secondAttribute="top" constant="12" id="B9a-Vx-hrQ"/>
+                            <constraint firstAttribute="trailing" secondItem="g2q-Db-a7e" secondAttribute="trailing" constant="16" id="BDP-dV-61H"/>
+                            <constraint firstAttribute="trailing" secondItem="BwW-mh-ulU" secondAttribute="trailing" constant="12" id="fQ3-x3-cHW"/>
+                            <constraint firstItem="g2q-Db-a7e" firstAttribute="leading" secondItem="ibT-Rq-oLW" secondAttribute="leading" constant="16" id="kPW-7i-3vN"/>
+                            <constraint firstItem="g2q-Db-a7e" firstAttribute="top" secondItem="ibT-Rq-oLW" secondAttribute="top" constant="12" id="vtT-CL-vdP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ibT-Rq-oLW" secondAttribute="trailing" constant="16" id="BbL-ar-CS8"/>
+                    <constraint firstAttribute="bottom" secondItem="ibT-Rq-oLW" secondAttribute="bottom" priority="250" constant="8" id="Yuc-Zv-dCT"/>
+                    <constraint firstItem="ibT-Rq-oLW" firstAttribute="leading" secondItem="dHu-1I-v4i" secondAttribute="leading" constant="16" id="bs4-5H-WCD"/>
+                    <constraint firstItem="ibT-Rq-oLW" firstAttribute="top" secondItem="dHu-1I-v4i" secondAttribute="top" id="rSh-FL-HFV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="ibT-Rq-oLW" id="uld-Av-Vw8"/>
+                <outlet property="dateLabel" destination="WU5-zj-0TL" id="wyh-HQ-num"/>
+                <outlet property="indicatorView" destination="BwW-mh-ulU" id="fan-wc-k2r"/>
+                <outlet property="messageLabel" destination="bTk-Nj-ykJ" id="pii-FE-ax0"/>
+                <outlet property="titleLabel" destination="F11-CB-V88" id="5Rb-mN-89a"/>
+            </connections>
+            <point key="canvasLocation" x="-7.2463768115942031" y="77.008928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

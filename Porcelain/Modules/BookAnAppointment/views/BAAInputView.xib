@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BAAInputView" customModule="Porcelain" customModuleProvider="target">
+            <connections>
+                <outlet property="calloutButton" destination="MMc-oy-na4" id="4Pe-02-Xs8"/>
+                <outlet property="multiSelectionCollectionView" destination="r2Z-Uc-Szf" id="cs2-LW-aVr"/>
+                <outlet property="separatorView" destination="5fA-VH-njI" id="cNw-PK-UhB"/>
+                <outlet property="textView" destination="c9C-Go-iXT" id="VeQ-bR-Siy"/>
+                <outlet property="titleLabel" destination="Yap-f2-nAD" id="D3m-Zu-jBl"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Ugy-CC-sXk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="htB-Mn-YOJ">
+                    <rect key="frame" x="16" y="30" width="382" height="21"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-Tf-yey">
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="17"/>
+                            <subviews>
+                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r2Z-Uc-Szf" customClass="BAAResizingCollectionView" customModule="Porcelain" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="krD-Im-Vmo" customClass="AlignedCollectionViewFlowLayout" customModule="AlignedCollectionViewFlowLayout">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c9C-Go-iXT" customClass="DesignableTextView" customModule="Porcelain" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="17"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topMargin">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomMargin">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightMargin">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="c9C-Go-iXT" firstAttribute="leading" secondItem="dL3-Tf-yey" secondAttribute="leading" id="BO1-IY-hh7"/>
+                                <constraint firstAttribute="trailing" secondItem="r2Z-Uc-Szf" secondAttribute="trailing" id="DAt-Jf-NE9"/>
+                                <constraint firstAttribute="trailing" secondItem="c9C-Go-iXT" secondAttribute="trailing" id="Voz-sv-NzD"/>
+                                <constraint firstItem="r2Z-Uc-Szf" firstAttribute="leading" secondItem="dL3-Tf-yey" secondAttribute="leading" id="igs-9Q-YLi"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-oy-na4">
+                            <rect key="frame" x="360" y="0.0" width="22" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="22" id="Zqd-1P-INm"/>
+                            </constraints>
+                            <state key="normal" image="ic-chevron-right"/>
+                            <connections>
+                                <action selector="calloutTapped:" destination="-1" eventType="touchUpInside" id="0vE-da-ioN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fA-VH-njI">
+                    <rect key="frame" x="16" y="61" width="382" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="h4z-eV-tjh"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yap-f2-nAD">
+                    <rect key="frame" x="16" y="30" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Yap-f2-nAD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="AuI-Vu-pab"/>
+                <constraint firstAttribute="trailing" secondItem="Yap-f2-nAD" secondAttribute="trailing" constant="16" id="BKD-4c-kOj"/>
+                <constraint firstItem="5fA-VH-njI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="MNx-7R-ORK"/>
+                <constraint firstAttribute="trailing" secondItem="htB-Mn-YOJ" secondAttribute="trailing" constant="16" id="nl7-lY-hgK"/>
+                <constraint firstItem="htB-Mn-YOJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="s2b-US-rv5"/>
+                <constraint firstItem="Yap-f2-nAD" firstAttribute="top" secondItem="dL3-Tf-yey" secondAttribute="top" id="sqx-Mb-tC4"/>
+                <constraint firstAttribute="bottom" secondItem="5fA-VH-njI" secondAttribute="bottom" id="ssD-Be-AnO"/>
+                <constraint firstAttribute="trailing" secondItem="5fA-VH-njI" secondAttribute="trailing" constant="16" id="uPy-Zf-Z58"/>
+                <constraint firstItem="htB-Mn-YOJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="vlD-8E-1Dd"/>
+                <constraint firstAttribute="bottom" secondItem="htB-Mn-YOJ" secondAttribute="bottom" constant="11" id="yQg-qH-XbX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="175.78125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-chevron-right" width="7" height="14"/>
+    </resources>
+</document>

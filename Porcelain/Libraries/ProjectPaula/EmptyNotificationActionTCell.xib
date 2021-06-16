@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyNotificationActionTCell" rowHeight="125" id="yhd-a4-dat" customClass="EmptyNotificationActionTCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yhd-a4-dat" id="nBJ-0s-MaT">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-oM-Gij">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0vL-oM-Gij" secondAttribute="bottom" id="4hZ-fK-F6s"/>
+                    <constraint firstAttribute="trailing" secondItem="0vL-oM-Gij" secondAttribute="trailing" id="VQB-0R-fE1"/>
+                    <constraint firstItem="0vL-oM-Gij" firstAttribute="top" secondItem="nBJ-0s-MaT" secondAttribute="top" id="oZO-wT-m9Q"/>
+                    <constraint firstItem="0vL-oM-Gij" firstAttribute="leading" secondItem="nBJ-0s-MaT" secondAttribute="leading" id="vAf-zv-NrU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="errorContainerView" destination="0vL-oM-Gij" id="eL7-eg-fVk"/>
+            </connections>
+            <point key="canvasLocation" x="5.7971014492753632" y="50.558035714285715"/>
+        </tableViewCell>
+    </objects>
+</document>

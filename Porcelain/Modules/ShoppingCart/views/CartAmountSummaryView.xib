@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartAmountSummaryView" customModule="Porcelain_Skin" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="cLs-y9-Tw0" id="2PY-eW-I9H"/>
+                <outlet property="cartCouponListView" destination="a9w-VI-VsM" id="9wA-En-Eol"/>
+                <outlet property="contentScrollHeightConstraint" destination="8Lh-Ux-hrR" id="0Ny-SV-H9V"/>
+                <outlet property="contentScrollView" destination="PYo-gi-6td" id="arn-gB-KX4"/>
+                <outlet property="couponApplyButton" destination="9Ns-NM-Bbr" id="63Y-Lq-hOr"/>
+                <outlet property="couponStack" destination="ao1-7z-shJ" id="pDe-c0-fi5"/>
+                <outlet property="couponTextField" destination="1WF-he-kdw" id="Z4o-Wt-ugb"/>
+                <outlet property="shippingStack" destination="c91-tH-kse" id="X2X-Kk-gYI"/>
+                <outlet property="shippingTitleLabel" destination="1sl-81-DlL" id="KMW-eu-34n"/>
+                <outlet property="shippingValueLabel" destination="7N9-oX-EGl" id="wTI-Wd-sya"/>
+                <outlet property="subtotalPriceLabel" destination="tFG-Uo-iTz" id="7N2-fu-87G"/>
+                <outlet property="subtotalTitleLabel" destination="CQZ-nM-jib" id="8HY-9u-LIp"/>
+                <outlet property="totalPriceLabel" destination="F0F-Fk-Xir" id="ULf-Lw-Vl6"/>
+                <outlet property="totalTitleLabel" destination="2Y3-6K-Cqe" id="pxf-07-sP0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="IJE-Ws-NtQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RIT-wr-ALM">
+                    <rect key="frame" x="0.0" y="16" width="414" height="347"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-7z-shJ">
+                            <rect key="frame" x="16" y="0.0" width="382" height="57"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y1U-xz-has">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-he-kdw" customClass="DesignableTextField" customModule="Porcelain_Skin" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftEdgeInset">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightEdgeInset">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ns-NM-Bbr" customClass="DesignableButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                                            <rect key="frame" x="291" y="0.0" width="91" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="lB9-Ne-hPx"/>
+                                            </constraints>
+                                            <inset key="contentEdgeInsets" minX="23" minY="0.0" maxX="23" maxY="0.0"/>
+                                            <state key="normal" title="APPLY"/>
+                                            <connections>
+                                                <action selector="couponApplyTapped:" destination="-1" eventType="touchUpInside" id="avv-yg-YqE"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1M-b7-mdR">
+                                    <rect key="frame" x="0.0" y="56" width="382" height="1"/>
+                                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="3BW-ww-lfc"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-gi-6td" customClass="ObservingContentScrollView" customModule="R4pidKit">
+                            <rect key="frame" x="0.0" y="73" width="414" height="210"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-Nt-j29">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIq-yl-csg">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="17"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal (7 item/s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQZ-nM-jib">
+                                                    <rect key="frame" x="0.0" y="0.0" width="326.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="$330.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFG-Uo-iTz">
+                                                    <rect key="frame" x="326.5" y="0.0" width="55.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a9w-VI-VsM" customClass="CartCouponListView" customModule="Porcelain_Skin" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="21" width="414" height="128"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="128" id="jse-Tj-hLl"/>
+                                            </constraints>
+                                        </tableView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c91-tH-kse">
+                                            <rect key="frame" x="16" y="153" width="382" height="17"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-81-DlL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="266" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Flat Rate $342.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N9-oX-EGl">
+                                                    <rect key="frame" x="266" y="0.0" width="116" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-0O-7hb">
+                                            <rect key="frame" x="16" y="174" width="382" height="17"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y3-6K-Cqe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="326.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="$342.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-Fk-Xir">
+                                                    <rect key="frame" x="326.5" y="0.0" width="55.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="c91-tH-kse" firstAttribute="leading" secondItem="jvi-Nt-j29" secondAttribute="leading" constant="16" id="Mwy-mT-RWg"/>
+                                        <constraint firstAttribute="trailing" secondItem="c91-tH-kse" secondAttribute="trailing" constant="16" id="Rr4-e8-rJa"/>
+                                        <constraint firstItem="a9w-VI-VsM" firstAttribute="leading" secondItem="jvi-Nt-j29" secondAttribute="leading" id="dUw-ZX-WtV"/>
+                                        <constraint firstItem="Sdb-0O-7hb" firstAttribute="leading" secondItem="jvi-Nt-j29" secondAttribute="leading" constant="16" id="iYQ-Eg-Dqq"/>
+                                        <constraint firstAttribute="trailing" secondItem="BIq-yl-csg" secondAttribute="trailing" constant="16" id="jkI-Cf-3Wj"/>
+                                        <constraint firstItem="BIq-yl-csg" firstAttribute="leading" secondItem="jvi-Nt-j29" secondAttribute="leading" constant="16" id="otV-sO-BqV"/>
+                                        <constraint firstAttribute="trailing" secondItem="a9w-VI-VsM" secondAttribute="trailing" id="yai-g4-RQ9"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sdb-0O-7hb" secondAttribute="trailing" constant="16" id="zyB-Su-1lL"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="210" id="8Lh-Ux-hrR"/>
+                                <constraint firstAttribute="bottom" secondItem="jvi-Nt-j29" secondAttribute="bottom" id="BJ1-qC-EYC"/>
+                                <constraint firstItem="jvi-Nt-j29" firstAttribute="leading" secondItem="PYo-gi-6td" secondAttribute="leading" id="Pka-PF-ib6"/>
+                                <constraint firstItem="jvi-Nt-j29" firstAttribute="width" secondItem="PYo-gi-6td" secondAttribute="width" id="RY9-jc-mkF"/>
+                                <constraint firstAttribute="trailing" secondItem="jvi-Nt-j29" secondAttribute="trailing" id="T1M-Zv-uxv"/>
+                                <constraint firstItem="jvi-Nt-j29" firstAttribute="top" secondItem="PYo-gi-6td" secondAttribute="top" id="nVT-37-41l"/>
+                            </constraints>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-y9-Tw0" customClass="ShopCartNavigationButton" customModule="Porcelain_Skin" customModuleProvider="target">
+                            <rect key="frame" x="16" y="299" width="382" height="48"/>
+                            <color key="backgroundColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="y50-fx-ZaV"/>
+                            </constraints>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="actionTapped:" destination="-1" eventType="touchUpInside" id="SBN-SC-xXI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ao1-7z-shJ" firstAttribute="leading" secondItem="RIT-wr-ALM" secondAttribute="leading" constant="16" id="0Kn-Hv-sSm"/>
+                        <constraint firstAttribute="trailing" secondItem="cLs-y9-Tw0" secondAttribute="trailing" constant="16" id="3Jj-De-W54"/>
+                        <constraint firstItem="cLs-y9-Tw0" firstAttribute="leading" secondItem="RIT-wr-ALM" secondAttribute="leading" constant="16" id="NZu-y0-QY5"/>
+                        <constraint firstAttribute="trailing" secondItem="PYo-gi-6td" secondAttribute="trailing" id="UmS-by-GY5"/>
+                        <constraint firstItem="PYo-gi-6td" firstAttribute="leading" secondItem="RIT-wr-ALM" secondAttribute="leading" id="Vjk-kX-9Q1"/>
+                        <constraint firstAttribute="trailing" secondItem="ao1-7z-shJ" secondAttribute="trailing" constant="16" id="vpE-di-BHn"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RIT-wr-ALM" secondAttribute="bottom" constant="16" id="0t3-cT-U1A"/>
+                <constraint firstAttribute="trailing" secondItem="RIT-wr-ALM" secondAttribute="trailing" id="GHe-ia-R4T"/>
+                <constraint firstItem="RIT-wr-ALM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VUN-gt-T0d"/>
+                <constraint firstItem="RIT-wr-ALM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="gDf-91-RUG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="63.768115942028992" y="-141.62946428571428"/>
+        </view>
+    </objects>
+</document>

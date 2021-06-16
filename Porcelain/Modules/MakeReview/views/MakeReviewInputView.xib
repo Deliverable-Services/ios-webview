@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeReviewInputView" customModule="Porcelain" customModuleProvider="target">
+            <connections>
+                <outlet property="separatorView" destination="ARF-AU-FDs" id="M8G-DD-gh0"/>
+                <outlet property="textField" destination="ila-R9-a1u" id="WQc-aV-7d4"/>
+                <outlet property="titleLabel" destination="VBI-qN-frM" id="h5b-xk-BUE"/>
+                <outlet property="view" destination="z7j-0G-gc7" id="Kmh-iX-NtE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z7j-0G-gc7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBI-qN-frM">
+                    <rect key="frame" x="16" y="25.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ila-R9-a1u">
+                    <rect key="frame" x="16" y="18" width="382" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="UeP-lk-Awj"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textEditingChanged:" destination="-1" eventType="editingChanged" id="bsP-iv-hq9"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-AU-FDs">
+                    <rect key="frame" x="0.0" y="71" width="414" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="grD-tB-22o"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VBI-qN-frM" firstAttribute="centerY" secondItem="ila-R9-a1u" secondAttribute="centerY" id="8PX-uo-cfL"/>
+                <constraint firstAttribute="bottom" secondItem="ARF-AU-FDs" secondAttribute="bottom" id="9Lx-0Q-byM"/>
+                <constraint firstItem="ARF-AU-FDs" firstAttribute="leading" secondItem="z7j-0G-gc7" secondAttribute="leading" id="bOT-5g-9T6"/>
+                <constraint firstAttribute="trailing" secondItem="ARF-AU-FDs" secondAttribute="trailing" id="bUa-ug-NlH"/>
+                <constraint firstItem="VBI-qN-frM" firstAttribute="leading" secondItem="z7j-0G-gc7" secondAttribute="leading" constant="16" id="lK5-C5-91L"/>
+                <constraint firstItem="ila-R9-a1u" firstAttribute="leading" secondItem="z7j-0G-gc7" secondAttribute="leading" constant="16" id="o47-1R-jf7"/>
+                <constraint firstItem="ila-R9-a1u" firstAttribute="centerY" secondItem="z7j-0G-gc7" secondAttribute="centerY" id="qab-dW-X5c"/>
+                <constraint firstAttribute="trailing" secondItem="ila-R9-a1u" secondAttribute="trailing" constant="16" id="tfS-9A-t6G"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ZUg-Pf-Ypi"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopRecentSearchTCell" rowHeight="48" id="ReN-eg-8Fl" customClass="ShopRecentSearchTCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ReN-eg-8Fl" id="BAh-33-cdp">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivf-TE-3NK">
+                        <rect key="frame" x="16" y="13" width="382" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ivf-TE-3NK" secondAttribute="bottom" priority="250" constant="11" id="Dy5-z8-rUk"/>
+                    <constraint firstAttribute="trailing" secondItem="ivf-TE-3NK" secondAttribute="trailing" constant="16" id="gzE-bG-7fg"/>
+                    <constraint firstItem="ivf-TE-3NK" firstAttribute="leading" secondItem="BAh-33-cdp" secondAttribute="leading" constant="16" id="mlx-sl-YHf"/>
+                    <constraint firstItem="ivf-TE-3NK" firstAttribute="top" secondItem="BAh-33-cdp" secondAttribute="top" constant="13" id="yYq-M0-Tc6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="ivf-TE-3NK" id="tEZ-YX-KMa"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="46.875"/>
+        </tableViewCell>
+    </objects>
+</document>

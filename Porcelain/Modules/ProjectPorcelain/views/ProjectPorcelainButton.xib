@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectPorcelainButton" customModule="Porcelain" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="Geu-rv-LY4" id="Kba-ZZ-buC"/>
+                <outlet property="imageView" destination="ca0-g9-gaI" id="Qse-cF-umm"/>
+                <outlet property="titleLabel" destination="EL7-zt-Wbh" id="Dic-Yo-Nv2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="44a-hC-nCH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-8c-hzP">
+                    <rect key="frame" x="16" y="24" width="311" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ca0-g9-gaI">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="Mve-tk-pvp"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-GE-diE">
+                            <rect key="frame" x="64" y="4" width="247" height="72"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="My Treatment Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-zt-Wbh">
+                                    <rect key="frame" x="0.0" y="0.0" width="247" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Discover your carefully-curated, bespoke regimen that works specifically for you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-rv-LY4">
+                                    <rect key="frame" x="0.0" y="25" width="247" height="47"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ImC-8c-hzP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="13k-n5-LaC"/>
+                <constraint firstAttribute="trailing" secondItem="ImC-8c-hzP" secondAttribute="trailing" constant="16" id="L8z-90-Xwr"/>
+                <constraint firstAttribute="bottom" secondItem="ImC-8c-hzP" secondAttribute="bottom" constant="24" id="NNl-Vk-jBh"/>
+                <constraint firstItem="ImC-8c-hzP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="o9R-sD-fNG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-154.34782608695653" y="-113.83928571428571"/>
+        </view>
+    </objects>
+</document>

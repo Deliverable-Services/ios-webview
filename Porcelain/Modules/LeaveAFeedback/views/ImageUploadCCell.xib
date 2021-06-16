@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageUploadCCell" id="Tjc-Bx-41n" customClass="ImageUploadCCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="km4-3E-R7J">
+                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Voq-kQ-YcU">
+                                <rect key="frame" x="8" y="7" width="56" height="58"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-upload-add" translatesAutoresizingMaskIntoConstraints="NO" id="dTA-eq-gPp">
+                                        <rect key="frame" x="18" y="0.0" width="20" height="20"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-lz-dmB">
+                                        <rect key="frame" x="8" y="28" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="11"/>
+                                        <color key="textColor" red="0.56470588235294117" green="0.56470588235294117" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Voq-kQ-YcU" secondAttribute="trailing" constant="8" id="Rv0-Hp-3X4"/>
+                            <constraint firstItem="Voq-kQ-YcU" firstAttribute="leading" secondItem="km4-3E-R7J" secondAttribute="leading" constant="8" id="bpU-ji-ZGp"/>
+                            <constraint firstItem="Voq-kQ-YcU" firstAttribute="centerY" secondItem="km4-3E-R7J" secondAttribute="centerY" id="hWs-Ln-WpI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="km4-3E-R7J" secondAttribute="trailing" id="0za-e6-55W"/>
+                <constraint firstItem="km4-3E-R7J" firstAttribute="top" secondItem="Tjc-Bx-41n" secondAttribute="top" id="MUQ-AW-3pv"/>
+                <constraint firstAttribute="bottom" secondItem="km4-3E-R7J" secondAttribute="bottom" id="j7A-Ji-7Kq"/>
+                <constraint firstItem="km4-3E-R7J" firstAttribute="leading" secondItem="Tjc-Bx-41n" secondAttribute="leading" id="ncZ-L1-Yte"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZEj-rS-Zqi"/>
+            <size key="customSize" width="153" height="149"/>
+            <connections>
+                <outlet property="titleLabel" destination="zrg-lz-dmB" id="lOm-16-Kk1"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="94.754464285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic-upload-add" width="20" height="20"/>
+    </resources>
+</document>

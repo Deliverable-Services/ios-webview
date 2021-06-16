@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A4h-8S-J3h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dialog View Controller-->
+        <scene sceneID="IjM-xJ-oZH">
+            <objects>
+                <viewController storyboardIdentifier="DialogViewController" id="A4h-8S-J3h" customClass="DialogViewController" customModule="Porcelain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B5c-In-ub7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpe-Iq-zFk" customClass="ObservingContentScrollView" customModule="R4pidKit">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="KZx-C0-uKj">
+                                        <rect key="frame" x="0.0" y="16" width="414" height="188.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-4k-Z70">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="114.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-Rx-qrq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxD-xD-CzO" customClass="DesignableTextView" customModule="Porcelain" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="30.5" width="382" height="84"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topMargin">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomMargin">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightMargin">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a81-DX-ab2">
+                                                <rect key="frame" x="16" y="138.5" width="382" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="48" id="DPT-fD-ujz"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yEJ-4k-Z70" firstAttribute="leading" secondItem="KZx-C0-uKj" secondAttribute="leading" constant="16" id="7H1-Ux-iQP"/>
+                                            <constraint firstAttribute="trailing" secondItem="a81-DX-ab2" secondAttribute="trailing" constant="16" id="7bo-tY-UXS"/>
+                                            <constraint firstItem="a81-DX-ab2" firstAttribute="leading" secondItem="KZx-C0-uKj" secondAttribute="leading" constant="16" id="H9P-9T-E54"/>
+                                            <constraint firstAttribute="trailing" secondItem="yEJ-4k-Z70" secondAttribute="trailing" constant="16" id="me9-RE-iDq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KZx-C0-uKj" firstAttribute="leading" secondItem="Tpe-Iq-zFk" secondAttribute="leading" id="EBd-bB-8lL"/>
+                                    <constraint firstItem="KZx-C0-uKj" firstAttribute="top" secondItem="Tpe-Iq-zFk" secondAttribute="top" constant="16" id="GQr-IG-XTz"/>
+                                    <constraint firstAttribute="bottom" secondItem="KZx-C0-uKj" secondAttribute="bottom" constant="24" id="HWz-X3-4BP"/>
+                                    <constraint firstItem="KZx-C0-uKj" firstAttribute="width" secondItem="Tpe-Iq-zFk" secondAttribute="width" id="d5i-Zm-oXe"/>
+                                    <constraint firstAttribute="trailing" secondItem="KZx-C0-uKj" secondAttribute="trailing" id="nLk-bj-ILX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tpe-Iq-zFk" firstAttribute="leading" secondItem="B5c-In-ub7" secondAttribute="leading" id="Di6-YC-2xf"/>
+                            <constraint firstAttribute="trailing" secondItem="Tpe-Iq-zFk" secondAttribute="trailing" id="gyP-Ue-5C4"/>
+                            <constraint firstItem="Tpe-Iq-zFk" firstAttribute="top" secondItem="B5c-In-ub7" secondAttribute="top" id="pGm-K3-baG"/>
+                            <constraint firstAttribute="bottom" secondItem="Tpe-Iq-zFk" secondAttribute="bottom" id="tVB-dJ-yLE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dBS-iK-rhY"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="400"/>
+                    <connections>
+                        <outlet property="buttonStack" destination="a81-DX-ab2" id="diF-Co-ewm"/>
+                        <outlet property="scrollView" destination="Tpe-Iq-zFk" id="Mut-qu-2fZ"/>
+                        <outlet property="textView" destination="jxD-xD-CzO" id="3js-KX-4sH"/>
+                        <outlet property="titleLabel" destination="cOe-Rx-qrq" id="4Wh-GL-c7n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ex-Nm-S1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>

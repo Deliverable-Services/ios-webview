@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BAATimeSlotsView" customModule="Porcelain" customModuleProvider="target">
+            <connections>
+                <outlet property="afternoonTableView" destination="8Ke-lD-w4m" id="afe-7f-rhm"/>
+                <outlet property="contentStack" destination="a2K-GC-9ge" id="0LT-cX-L1J"/>
+                <outlet property="emptyNotificationView" destination="UAw-5c-cp3" id="fhH-oR-PRe"/>
+                <outlet property="eveningTableView" destination="Vwi-ko-4g0" id="Fj5-U7-Eks"/>
+                <outlet property="headerButton" destination="oeH-GO-xkH" id="HB5-6q-G49"/>
+                <outlet property="morningTableView" destination="3O4-Xf-8uG" id="0wm-9j-hTB"/>
+                <outlet property="separatorView" destination="zm0-Dx-ec8" id="Pxc-rP-bmX"/>
+                <outlet property="therapistsTableView" destination="L99-1S-gEf" id="z6r-xp-DMg"/>
+                <outlet property="view" destination="eVA-x2-YOs" id="gp7-SH-tZZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eVA-x2-YOs">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="486"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-cr-Zuo">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="486"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAw-5c-cp3" customClass="EmptyNotificationView" customModule="Porcelain" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="54"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="P7o-NW-Kb2"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-GC-9ge">
+                            <rect key="frame" x="0.0" y="54" width="343" height="432"/>
+                            <subviews>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeH-GO-xkH">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="9GU-Me-Da7"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zm0-Dx-ec8">
+                                    <rect key="frame" x="0.0" y="48" width="343" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Ar3-nd-rYE"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rr-iv-55g">
+                                    <rect key="frame" x="0.0" y="49" width="343" height="5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="89E-T5-04g"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="n14-kq-EuR">
+                                    <rect key="frame" x="0.0" y="54" width="343" height="307"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3O4-Xf-8uG" customClass="BAAAvailableTimeSlotsTableView" customModule="Porcelain" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="307"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableView>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-lD-w4m" customClass="BAAAvailableTimeSlotsTableView" customModule="Porcelain" customModuleProvider="target">
+                                            <rect key="frame" x="114.5" y="0.0" width="114" height="307"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableView>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vwi-ko-4g0" customClass="BAAAvailableTimeSlotsTableView" customModule="Porcelain" customModuleProvider="target">
+                                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="307"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableView>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72t-tw-0SV">
+                                    <rect key="frame" x="0.0" y="361" width="343" height="5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="FPR-am-Pjo"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L99-1S-gEf" customClass="BAAAvailableTherapistsTableView" customModule="Porcelain" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="366" width="343" height="66"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Kpj-cr-Zuo" secondAttribute="bottom" id="2EE-IS-0O3"/>
+                <constraint firstItem="Kpj-cr-Zuo" firstAttribute="top" secondItem="eVA-x2-YOs" secondAttribute="top" id="RW7-bw-kqd"/>
+                <constraint firstItem="Kpj-cr-Zuo" firstAttribute="leading" secondItem="eVA-x2-YOs" secondAttribute="leading" id="Tjz-cP-TLe"/>
+                <constraint firstAttribute="trailing" secondItem="Kpj-cr-Zuo" secondAttribute="trailing" id="VFF-rr-PuP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="mf7-7W-NNJ"/>
+            <point key="canvasLocation" x="145.6521739130435" y="-179.46428571428569"/>
+        </view>
+    </objects>
+</document>

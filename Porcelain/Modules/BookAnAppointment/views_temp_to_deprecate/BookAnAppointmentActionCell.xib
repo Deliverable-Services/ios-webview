@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="aY1-b1-upD" customClass="BookAnAppointmentActionCell" customModule="Porcelain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aY1-b1-upD" id="soI-Mk-L7n">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dm-Xr-jth">
+                        <rect key="frame" x="16" y="0.0" width="343" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="AQB-on-jkn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsi-zW-HcK" customClass="DesignableButton" customModule="Porcelain" customModuleProvider="target">
+                        <rect key="frame" x="16" y="28" width="343" height="56"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="gMy-f6-KQv"/>
+                        </constraints>
+                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="15" maxY="0.0"/>
+                        <state key="normal" title="Button"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="calloutTapped:" destination="aY1-b1-upD" eventType="touchUpInside" id="o4W-u8-PWY"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="kte-3n-pZp">
+                        <rect key="frame" x="334" y="48" width="9" height="16"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Wsi-zW-HcK" secondAttribute="trailing" constant="16" id="97A-oE-KpY"/>
+                    <constraint firstItem="Wsi-zW-HcK" firstAttribute="leading" secondItem="soI-Mk-L7n" secondAttribute="leading" constant="16" id="FDn-VY-UP6"/>
+                    <constraint firstAttribute="trailing" secondItem="6dm-Xr-jth" secondAttribute="trailing" constant="16" id="Hrd-iU-ZMg"/>
+                    <constraint firstItem="kte-3n-pZp" firstAttribute="trailing" secondItem="Wsi-zW-HcK" secondAttribute="trailing" constant="-16" id="Ush-tG-3f4"/>
+                    <constraint firstItem="6dm-Xr-jth" firstAttribute="top" secondItem="soI-Mk-L7n" secondAttribute="top" id="eOf-Rj-arI"/>
+                    <constraint firstItem="Wsi-zW-HcK" firstAttribute="top" secondItem="6dm-Xr-jth" secondAttribute="bottom" constant="8" id="ezQ-bT-BpK"/>
+                    <constraint firstAttribute="bottom" secondItem="Wsi-zW-HcK" secondAttribute="bottom" constant="16" id="mbI-cu-MiU"/>
+                    <constraint firstItem="6dm-Xr-jth" firstAttribute="leading" secondItem="soI-Mk-L7n" secondAttribute="leading" constant="16" id="ng9-C0-djc"/>
+                    <constraint firstItem="kte-3n-pZp" firstAttribute="centerY" secondItem="Wsi-zW-HcK" secondAttribute="centerY" id="swk-kq-wOa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="calloutButton" destination="Wsi-zW-HcK" id="9ce-bS-s1l"/>
+                <outlet property="calloutImageView" destination="kte-3n-pZp" id="s80-T9-5CQ"/>
+                <outlet property="titleLabel" destination="6dm-Xr-jth" id="QMS-MI-24w"/>
+            </connections>
+            <point key="canvasLocation" x="-155.5" y="-270.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowRight" width="9" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShippingAddressTCell" rowHeight="199" id="at1-3g-iQa" customClass="ShippingAddressTCell" customModule="Porcelain_Skin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="at1-3g-iQa" id="LLW-ff-W92">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-3d-ynN" customClass="DesignableView" customModule="Porcelain_Skin" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="382" height="182.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L2e-Dg-mNs">
+                                <rect key="frame" x="16" y="15" width="350" height="151.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="axL-HF-xRD">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="18"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-eG-99L">
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="18"/>
+                                                <state key="normal" title="Default Shippinng Address"/>
+                                                <connections>
+                                                    <action selector="defaultTapped:" destination="at1-3g-iQa" eventType="touchUpInside" id="FuD-YS-q5f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-6I-KLg">
+                                                <rect key="frame" x="302" y="0.0" width="16" height="18"/>
+                                                <state key="normal" image="ic-pencil"/>
+                                                <connections>
+                                                    <action selector="editTapped:" destination="at1-3g-iQa" eventType="touchUpInside" id="q3Y-a4-8h8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-gg-xub">
+                                                <rect key="frame" x="334" y="0.0" width="16" height="18"/>
+                                                <state key="normal" image="ic-delete"/>
+                                                <connections>
+                                                    <action selector="deleteTapped:" destination="at1-3g-iQa" eventType="touchUpInside" id="6JQ-eR-1yX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="ivZ-h4-jgd"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-mQ-djt">
+                                        <rect key="frame" x="0.0" y="33" width="350" height="1"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="qzV-7b-00T"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JSY-Or-ynO">
+                                        <rect key="frame" x="0.0" y="49" width="350" height="102.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Justine Angelo Rangel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLk-OD-lxB">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="+63 915 801 2509" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCY-PA-A6H">
+                                                <rect key="frame" x="0.0" y="20.5" width="350" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="justine.rangel@r4pid.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv0-jS-jUM">
+                                                <rect key="frame" x="0.0" y="41" width="350" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80, Genting Lane, Ruby Industrial Complex,  Genting Block, Geylang 349565, Singapore" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-5z-ok0">
+                                                <rect key="frame" x="0.0" y="61.5" width="350" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L2e-Dg-mNs" secondAttribute="bottom" constant="16" id="IcN-wT-vye"/>
+                            <constraint firstItem="L2e-Dg-mNs" firstAttribute="top" secondItem="1NX-3d-ynN" secondAttribute="top" constant="15" id="LBu-U3-vDX"/>
+                            <constraint firstItem="L2e-Dg-mNs" firstAttribute="leading" secondItem="1NX-3d-ynN" secondAttribute="leading" constant="16" id="W2f-S3-Saa"/>
+                            <constraint firstAttribute="trailing" secondItem="L2e-Dg-mNs" secondAttribute="trailing" constant="16" id="dqL-Jt-bBd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1NX-3d-ynN" firstAttribute="top" secondItem="LLW-ff-W92" secondAttribute="top" id="0c0-Gl-bIV"/>
+                    <constraint firstItem="1NX-3d-ynN" firstAttribute="leading" secondItem="LLW-ff-W92" secondAttribute="leading" constant="16" id="Psh-h3-7nH"/>
+                    <constraint firstAttribute="bottom" secondItem="1NX-3d-ynN" secondAttribute="bottom" priority="250" constant="12" id="g92-p0-FUV"/>
+                    <constraint firstAttribute="trailing" secondItem="1NX-3d-ynN" secondAttribute="trailing" constant="16" id="gYV-45-OxQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addressLabel" destination="wFD-5z-ok0" id="7yv-Xh-Y2I"/>
+                <outlet property="containerView" destination="1NX-3d-ynN" id="rBC-Wc-ZYo"/>
+                <outlet property="defaultButton" destination="UjA-eG-99L" id="WPw-y1-V7K"/>
+                <outlet property="deleteButton" destination="6uB-gg-xub" id="uXH-58-nPo"/>
+                <outlet property="editButton" destination="dq3-6I-KLg" id="Zf4-v1-uCG"/>
+                <outlet property="emailLabel" destination="mv0-jS-jUM" id="KSD-gk-cn3"/>
+                <outlet property="nameLabel" destination="BLk-OD-lxB" id="4iy-15-Mwy"/>
+                <outlet property="phoneLabel" destination="rCY-PA-A6H" id="zG3-Lm-wqR"/>
+                <outlet property="separatorView" destination="aIs-mQ-djt" id="4gQ-Tb-wA3"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="102.79017857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-delete" width="16" height="16"/>
+        <image name="ic-pencil" width="16" height="16"/>
+    </resources>
+</document>

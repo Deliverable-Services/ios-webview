@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderReceivedBankDetailsView" customModule="Porcelain_Skin" customModuleProvider="target">
+            <connections>
+                <outlet property="accountNumberLabel" destination="3zs-E8-Xcu" id="0y8-k8-u9Y"/>
+                <outlet property="accountNumberTitleLabel" destination="5JH-MQ-sAH" id="i9j-ZO-W5N"/>
+                <outlet property="bankLabel" destination="hKQ-Jk-R3N" id="mEi-Gy-vOS"/>
+                <outlet property="bankTitleLabel" destination="HGh-TB-cKw" id="7fx-xh-aFW"/>
+                <outlet property="titleLabel" destination="yvA-CY-GgR" id="L7l-R1-7fK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="BJq-Ny-VyI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="raW-pg-OUA">
+                    <rect key="frame" x="16" y="16" width="382" height="144"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PayNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvA-CY-GgR">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iQJ-Rl-Hef">
+                            <rect key="frame" x="0.0" y="29" width="382" height="115"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-cy-w0i">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="1"/>
+                                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="DPd-WM-BrZ"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M99-gB-U5p">
+                                    <rect key="frame" x="0.0" y="17" width="382" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANK:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-TB-cKw">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PayNow Unique Entity Number (UEN)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKQ-Jk-R3N">
+                                            <rect key="frame" x="0.0" y="24" width="382" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ByD-vO-wc1">
+                                    <rect key="frame" x="0.0" y="74" width="382" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JH-MQ-sAH">
+                                            <rect key="frame" x="0.0" y="0.0" width="126.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="JCu-Gk-0AB">
+                                            <rect key="frame" x="0.0" y="24" width="131.5" height="17"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="201136256W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zs-E8-Xcu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="86.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-AC-NWS">
+                                                    <rect key="frame" x="118.5" y="0.0" width="13" height="17"/>
+                                                    <state key="normal" image="ic-copy"/>
+                                                    <connections>
+                                                        <action selector="copyTapped:" destination="-1" eventType="touchUpInside" id="XJp-Ei-YFY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="raW-pg-OUA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="M6j-Dh-7W4"/>
+                <constraint firstAttribute="trailing" secondItem="raW-pg-OUA" secondAttribute="trailing" constant="16" id="OAS-a1-CP5"/>
+                <constraint firstAttribute="bottom" secondItem="raW-pg-OUA" secondAttribute="bottom" constant="16" id="tSx-PO-PZe"/>
+                <constraint firstItem="raW-pg-OUA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="wS6-71-ISn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="192.85714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-copy" width="13" height="14"/>
+    </resources>
+</document>

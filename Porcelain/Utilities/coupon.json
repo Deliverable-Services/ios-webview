@@ -1,0 +1,9 @@
+{
+  "message": "Coupon code valid",
+  "data": {
+  "isValid": true,
+  "discountType": "percent",
+  "amount": 10.00,
+  "couponCode": "thankyou10"
+  }
+}
