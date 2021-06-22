@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mlG-4j-XQJ">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Presenter View Controller-->
+        <scene sceneID="VUe-ai-Gmy">
+            <objects>
+                <viewController storyboardIdentifier="PresenterViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="mlG-4j-XQJ" customClass="PresenterViewController" customModule="R4pidKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zVI-ot-D01">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwI-fu-rmW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31m-7N-uxE" customClass="ContainerView" customModule="R4pidKit" customModuleProvider="target">
+                                <rect key="frame" x="100" y="100" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Got-qP-42o"/>
+                                    <constraint firstAttribute="width" constant="200" id="eY7-IH-dwi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="31m-7N-uxE" firstAttribute="leading" secondItem="mjw-wg-l5y" secondAttribute="leading" constant="100" id="01d-NU-n69"/>
+                            <constraint firstItem="kwI-fu-rmW" firstAttribute="leading" secondItem="zVI-ot-D01" secondAttribute="leading" id="Yzd-Ca-HKb"/>
+                            <constraint firstItem="31m-7N-uxE" firstAttribute="top" secondItem="zVI-ot-D01" secondAttribute="top" constant="100" id="a2H-zm-viv"/>
+                            <constraint firstItem="kwI-fu-rmW" firstAttribute="top" secondItem="zVI-ot-D01" secondAttribute="top" id="eeo-zI-4eB"/>
+                            <constraint firstAttribute="trailing" secondItem="kwI-fu-rmW" secondAttribute="trailing" id="hOM-AM-Kd8"/>
+                            <constraint firstAttribute="bottom" secondItem="kwI-fu-rmW" secondAttribute="bottom" id="qfb-oY-Gmg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mjw-wg-l5y"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerHeightConstraint" destination="Got-qP-42o" id="APb-r9-IGj"/>
+                        <outlet property="containerLeftConstraint" destination="01d-NU-n69" id="dLx-uj-0KI"/>
+                        <outlet property="containerTopConstraint" destination="a2H-zm-viv" id="NkG-rE-OnD"/>
+                        <outlet property="containerView" destination="31m-7N-uxE" id="chc-3A-cgY"/>
+                        <outlet property="containerWidthConstraint" destination="eY7-IH-dwi" id="2Li-Ia-I1a"/>
+                        <outlet property="dimView" destination="kwI-fu-rmW" id="n6g-72-PE0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUe-NT-nt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.078125" y="130.46875"/>
+        </scene>
+    </scenes>
+</document>
