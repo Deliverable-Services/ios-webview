@@ -349,6 +349,7 @@
 		8FB87F4320A6046F00AF109D /* PorcelainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB87F4220A6046F00AF109D /* PorcelainTests.swift */; };
 		8FE7676920B3F0EA00F4B40C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7676720B3F0EA00F4B40C /* AppTheme.swift */; };
 		BB883D1F5EEBF54BA211305C /* Pods_PorcelainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A4955CCBCD695BBB75A3BA /* Pods_PorcelainTests.framework */; };
+		C040B6CD268503F3009C2A10 /* ShopWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B6CC268503F3009C2A10 /* ShopWebViewController.swift */; };
 		C3FDE08C220AA9ED009F814A /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FDE08B220AA9ED009F814A /* NotificationHandler.swift */; };
 		CECE3D6820EF4C4A00A3E463 /* AppNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE3D6720EF4C4A00A3E463 /* AppNotificationNames.swift */; };
 /* End PBXBuildFile section */
@@ -775,6 +776,7 @@
 		8FB87F4220A6046F00AF109D /* PorcelainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorcelainTests.swift; sourceTree = "<group>"; };
 		8FB87F4420A6046F00AF109D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FE7676720B3F0EA00F4B40C /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		C040B6CC268503F3009C2A10 /* ShopWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopWebViewController.swift; sourceTree = "<group>"; };
 		C28CB0835D65691A81D02640 /* Pods-Porcelain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Porcelain.debug.xcconfig"; path = "Target Support Files/Pods-Porcelain/Pods-Porcelain.debug.xcconfig"; sourceTree = "<group>"; };
 		C3FDE08B220AA9ED009F814A /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		CECE3D6720EF4C4A00A3E463 /* AppNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationNames.swift; sourceTree = "<group>"; };
@@ -1188,6 +1190,7 @@
 				076F920D230A34BD00CDDB6A /* views */,
 				076F920B230A342100CDDB6A /* Shop.storyboard */,
 				076F9209230A333200CDDB6A /* ShopViewModel.swift */,
+				C040B6CC268503F3009C2A10 /* ShopWebViewController.swift */,
 				076F9207230A31F900CDDB6A /* ShopViewController.swift */,
 				07EAB9E8231DDE820086AE40 /* ShopSearchViewController.swift */,
 				07876DE3230FB7180010BF43 /* TreatmentViewController.swift */,
@@ -2113,6 +2116,7 @@
 				07007B29229E23CC006CFBB7 /* PurchasesViewController.swift in Sources */,
 				0749145C22DDA6F6003DA847 /* ProfileMainCell.swift in Sources */,
 				07A7DA9223330DDE00411E1B /* AddressBookViewModel.swift in Sources */,
+				C040B6CD268503F3009C2A10 /* ShopWebViewController.swift in Sources */,
 				15B879F421A589CD00FD5958 /* MakeReviewViewModel.swift in Sources */,
 				070B06672293C457006FD629 /* Protocols+Entities.swift in Sources */,
 				07F9FE7A22A0F2C7008EC918 /* Article+CoreDataClass.swift in Sources */,
